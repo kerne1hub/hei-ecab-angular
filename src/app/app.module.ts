@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -19,20 +18,20 @@ import { AppState } from '@shared/store';
     BrowserModule,
     AppRoutingModule,
     TranslateModule.forRoot({
-          loader: {
-            provide: TranslateLoader,
-            useClass: WebpackTranslateLoader
-          }
-        }),
+      loader: {
+        provide: TranslateLoader,
+        useClass: WebpackTranslateLoader
+      }
+    }),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot(),
     StoreModule.forRoot<AppState>({
-          router: routerReducer
-        }),
+      router: routerReducer
+    }),
     StoreDevtoolsModule.instrument({
-          maxAge: 30,
-          logOnly: false
-        })
+      maxAge: 30,
+      logOnly: false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

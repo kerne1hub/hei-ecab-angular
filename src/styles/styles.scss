@@ -1,0 +1,19 @@
+@import 'fonts';
+@import 'vars';
+
+body, html {background: #f4f4f4; color: #000; font-size: 14px; font-family: $font;
+  min-height: 100%; margin: 0; padding: 0; -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {width: 16px; height: 16px; display: inline-block; vertical-align: text-top;
+  &-logo {background-image: url(/assets/images/logo.svg);}
+}
+
+/* links */
+a {text-decoration: none; color: #0D4CD3; transition: all 0.6s; cursor: pointer;
+  &:hover {transition: all 0.2s;}
+}
+.link {border-bottom: transparent 1px solid;
+  &:hover {border-bottom-color: #0D4CD3;}
+}

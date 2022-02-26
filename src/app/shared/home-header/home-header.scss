@@ -1,0 +1,5 @@
+:host .home-header {height: 64px; background: #fff; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  &-container {display: flex; height: 100%; padding: 0 50px;}
+  &-menu {flex: 1 1 auto; display: flex; justify-content: space-between; align-items: center; margin-left: 24px;}
+  .icon {width: 72px; height: 19px; margin: auto 0;}
+}
