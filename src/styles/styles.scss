@@ -8,6 +8,10 @@ body, html {background: #f4f4f4; color: #000; font-size: 14px; font-family: $fon
 
 .icon {width: 16px; height: 16px; display: inline-block; vertical-align: text-top;
   &-logo {background-image: url(/assets/images/logo.svg);}
+  &-employee {background-image: url(/assets/images/employee.svg);}
+  &-card {background-image: url(/assets/images/card.svg);}
+  &-case {background-image: url(/assets/images/case.svg);}
+  &-tasklist {background-image: url(/assets/images/tasklist.svg);}
 }
 
 /* links */
@@ -17,3 +21,31 @@ a {text-decoration: none; color: #0D4CD3; transition: all 0.6s; cursor: pointer;
 .link {border-bottom: transparent 1px solid;
   &:hover {border-bottom-color: #0D4CD3;}
 }
+
+input, select, textarea, button {outline: none; font-family: $font; font-size: 1rem;
+  box-sizing: border-box; border: 0;
+}
+
+input, textarea, select {filter: none;}
+
+/* button */
+.button {padding: 8px 14px; background-color: $paper-98; border: 1px solid $ink-80;
+  border-radius: 3px; color: $ink; font-size: 1rem; outline: none; box-sizing: border-box;
+  font-weight: 500; line-height: 18px; text-align: center; transition: all 0.2s;
+  cursor: pointer; display: inline-block; vertical-align: top; margin: 0;
+  &:hover {background-color: #fcfcfc;}
+  &:focus {background-color: $paper-95;}
+  &:disabled {background-color: $paper-95; color: $ink-80; border-color: $ink-80;
+    pointer-events: none;
+  }
+  &-primary {background-color: $primary; color: #fff; border-color: #325BA3;
+    &:hover {background-color: #417FD7;}
+    &:focus {background-color: #235AA9; border-color: #25457A;}
+  }
+  &-secondary {background-color: $paper-100; color: $primary; border-color: #325BA3;
+    &:hover {background-color: #417FD7; color: #fff;}
+    &:focus {background-color: #235AA9; border-color: #25457A; color: #fff;}
+  }
+}
+
+.tile {background: #FFFFFF; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);}

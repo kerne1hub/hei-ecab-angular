@@ -6,10 +6,14 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { PublicHomePageFacade } from './home.facade';
 import { HomeHeaderModule } from '@shared/home-header';
+import { PublicHomeRegisterLinkComponent } from './shared/components/register-link/register-link.component';
+import { PublicHomeFeaturesComponent } from './shared/components/features/features.component';
 
 @NgModule({
   declarations: [
-    PublicHomePageComponent
+    PublicHomePageComponent,
+    PublicHomeRegisterLinkComponent,
+    PublicHomeFeaturesComponent
   ],
     imports: [
         CommonModule,

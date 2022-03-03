@@ -1,1 +1,3 @@
-:host .home-page {}
+:host .home {
+  &-content {width: 1366px; margin: 5rem auto 2rem auto;}
+}

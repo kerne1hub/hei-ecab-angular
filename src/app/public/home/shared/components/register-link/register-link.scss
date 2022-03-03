@@ -1,0 +1,10 @@
+@import 'vars';
+
+:host .register-link {display: flex; align-items: center; min-height: 90px; border: 2px solid $primary; padding: 0 35px;
+  border-radius: 2px; box-sizing: border-box; background: $paper-100; filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.1));
+  &-description {display: inline-block; flex: 1 1 auto; margin-left: 24px;}
+  &-name {font-size: $large; font-weight: 600;}
+  &-text {font-size: $normal;}
+  .button {height: 52px; font-size: $normal;}
+  .icon {width: 48px; height: 48px;}
+}
