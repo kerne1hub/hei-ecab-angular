@@ -5,9 +5,18 @@
 
   @media(max-width: 900px) {
     .col {width: 100%; flex: 0 0 100%; margin-bottom: 29px;}
+    .register-link {text-align: center;
+      &-description {margin: 0;}
+      .button {margin-top: 8px;}
+    }
+    .home {
+      &-content {margin-top: 3rem;}
+      &-header-container {padding: 0 20px;}
+    }
     .features {
       &-title {flex-direction: column; flex-basis: 120px;}
-      &-name {margin: 0; text-align: center;}
+      &-name {margin: 8px 0 0; text-align: center;}
+      &-item {padding: 10px;}
     }
   };
 }

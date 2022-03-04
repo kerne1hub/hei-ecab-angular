@@ -1,4 +1,4 @@
-:host .home-header {position: sticky; top: 0; left: 0; z-index: 1; height: 64px; background: #fff;
+:host ::ng-deep .home-header {position: sticky; top: 0; left: 0; z-index: 1; height: 64px; background: #fff;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   &-container {display: flex; height: 100%; padding: 0 50px;}
   &-menu {flex: 1 1 auto; display: flex; justify-content: space-between; align-items: center; margin-left: 24px;}
