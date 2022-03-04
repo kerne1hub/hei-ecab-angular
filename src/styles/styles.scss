@@ -12,6 +12,9 @@ body, html {background: #f4f4f4; color: #000; font-size: 14px; font-family: $fon
   &-card {background-image: url(/assets/images/card.svg);}
   &-case {background-image: url(/assets/images/case.svg);}
   &-tasklist {background-image: url(/assets/images/tasklist.svg);}
+  &-time {background-image: url(/assets/images/time.svg);}
+  &-leftarrow {background-image: url(/assets/images/left-arrow.svg);}
+  &-rightarrow {background-image: url(/assets/images/right-arrow.svg);}
 }
 
 /* links */
@@ -48,4 +51,20 @@ input, textarea, select {filter: none;}
   }
 }
 
-.tile {background: #FFFFFF; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);}
+.tile {background: $paper-100; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);}
+
+/* grid */
+.container {width: 100%; padding: 0; box-sizing: border-box; margin: 0 auto;}
+.row {display: flex; flex-basis: 0; flex-wrap: wrap; margin: 0 -10px;
+  &-largegap {margin: 0 -40px;
+    .col {padding: 0 40px;}
+  }
+  &-nogap {margin: 0;}
+}
+.col {flex: 0 0 100%; padding: 0 10px; box-sizing: border-box;
+  &-25 {width: 25%; flex: 0 0 25%;}
+  &-33 {width: 33.6%; flex: 0 0 33.3%;}
+  &-50 {width: 50%; flex: 0 0 50%;}
+  &-66 {width: 66.6%; flex: 0 0 66.6%;}
+  &-75 {width: 75%; flex: 0 0 75%;}
+}

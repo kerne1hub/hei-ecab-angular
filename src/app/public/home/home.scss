@@ -1,3 +1,13 @@
-:host .home {
-  &-content {width: 1366px; margin: 5rem auto 2rem auto;}
+:host ::ng-deep .home {
+  &-content {max-width: 1366px; margin: 5rem auto 2rem auto;
+    .col {padding: 0 20px;}
+  }
+
+  @media(max-width: 900px) {
+    .col {width: 100%; flex: 0 0 100%; margin-bottom: 29px;}
+    .features {
+      &-title {flex-direction: column; flex-basis: 120px;}
+      &-name {margin: 0; text-align: center;}
+    }
+  };
 }

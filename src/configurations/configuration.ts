@@ -5,8 +5,8 @@
 export const configuration = {
   production: false,
   language: {
-    available: ['en'],
-    default: 'en'
+    available: ['ru, en'],
+    default: 'ru'
   }
 };
 

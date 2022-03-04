@@ -1,0 +1,17 @@
+@import 'vars';
+
+:host .news {display: flex; flex-direction: column; height: 512px;
+  &-content {display: flex; flex-direction: column; border-top: 1px solid $ink-80; height: 100%; overflow: auto;
+    border-bottom: 1px solid $ink-80; padding: 0 24px;}
+  &-header {font-size: $large; font-weight: 700; margin: 0; padding: 22px 24px;}
+  &-title {font-size: $large; text-align: center;}
+  &-text {flex: auto; white-space: pre-line; font-family: $font; font-size: $normal; margin-top: 34px;}
+  &-meta {color: $ink-50; font-size: $normal; padding: 20px 0;}
+  &-time {margin-left: 8px;}
+  &-controls {display: flex; align-items: center; padding: 18px 24px; font-size: $normal;
+    .icon {width: 24px; height: 24px;}
+  }
+  &-control {}
+  &-pagination {margin: 0 8px;}
+  &-link {margin-left: auto;}
+}

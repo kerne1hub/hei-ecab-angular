@@ -1,0 +1,17 @@
+{
+  "PUBLIC": {
+    "HOME": {
+      "REGISTER_LINK": {
+        "TEXT_LINK": "Электронный кабинет",
+        "TEXT_LINK_DESCRIPTION": "Зарегистрируйтесь чтобы начать пользоваться сервисом",
+        "BUTTON_REGISTER": "Зарегистрироваться"
+      }
+    }
+  },
+  "SHARED": {
+    "HOME_HEADER": {
+      "TEXT_INFO": "Информация",
+      "TEXT_LOGIN": "Войти"
+    }
+  }
+}

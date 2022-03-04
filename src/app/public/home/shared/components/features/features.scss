@@ -1,10 +1,11 @@
 @import 'vars';
 
-:host .features {height: 615px; background: $paper-100; margin-top: 29px;
+:host ::ng-deep .features {height: 615px; margin-top: 29px;
   &-item {display: flex; align-items: center; min-height: 100px; padding: 18px 35px; box-sizing: border-box;
     border-bottom: 1px solid $ink;
     .icon {width: 48px; height: 48px;}
     //&:not(:last-child) {border-bottom: 1px solid $ink;}
+    &:hover {background: $paper-95;}
   }
   &-title {display: inline-flex; align-items: center; flex: 0 0 300px;}
   &-name {font-size: $middle; font-weight: 600; color: $primary; margin-left: 20px;}

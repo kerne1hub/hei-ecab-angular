@@ -1,7 +1,7 @@
 export const configuration = {
   production: true,
   language: {
-    available: ['en'],
-    default: 'en'
+    available: ['ru, en'],
+    default: 'ru'
   }
 };
