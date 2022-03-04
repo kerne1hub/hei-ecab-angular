@@ -1,6 +1,6 @@
 @import 'vars';
 
-:host ::ng-deep .features {height: 615px; margin-top: 29px;
+:host ::ng-deep .features {min-height: 615px; margin-top: 29px;
   &-item {display: flex; align-items: center; min-height: 100px; padding: 18px 35px; box-sizing: border-box;
     border-bottom: 1px solid $ink;
     .icon {width: 48px; height: 48px;}
