@@ -9,13 +9,15 @@ import { HomeHeaderModule } from '@shared/home-header';
 import { PublicHomeRegisterLinkComponent } from './shared/components/register-link/register-link.component';
 import { PublicHomeFeaturesComponent } from './shared/components/features/features.component';
 import { PublicHomeNewsComponent } from './shared/components/news/news.component';
+import { PublicHomeSocialComponent } from './shared/components/social/social.component';
 
 @NgModule({
   declarations: [
     PublicHomePageComponent,
     PublicHomeRegisterLinkComponent,
     PublicHomeFeaturesComponent,
-    PublicHomeNewsComponent
+    PublicHomeNewsComponent,
+    PublicHomeSocialComponent
   ],
     imports: [
         CommonModule,

@@ -1,0 +1,14 @@
+@import 'vars';
+
+:host ::ng-deep .social {height: 164px; margin-top: 58px;
+  &-header {font-size: $large; font-weight: 700; margin: 0; padding: 22px 24px;}
+  &-content {padding: 26px 24px; border-top: 1px solid $ink-80;
+    .icon {width: 40px; height: 40px; background: $ink-65; transition: background 0.3s;}
+  }
+  &-link {
+    &:hover {
+      .icon {background: $primary;}
+    }
+    &:not(:last-child) {margin-right: 12px;}
+  }
+}

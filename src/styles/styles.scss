@@ -15,6 +15,10 @@ body, html {background: #f4f4f4; color: #000; font-size: 14px; font-family: $fon
   &-time {background-image: url(/assets/images/time.svg);}
   &-leftarrow {background-image: url(/assets/images/left-arrow.svg);}
   &-rightarrow {background-image: url(/assets/images/right-arrow.svg);}
+  &-vk {background-image: url(/assets/images/vk.svg); mask-image: url(/assets/images/vk.svg);}
+  &-facebook {background-image: url(/assets/images/facebook.svg); mask-image: url(/assets/images/facebook.svg);}
+  &-telegram {background-image: url(/assets/images/telegram.svg); mask-image: url(/assets/images/telegram.svg);}
+  &-instagram {background-image: url(/assets/images/instagram.svg); mask-image: url(/assets/images/instagram.svg);}
 }
 
 /* links */
