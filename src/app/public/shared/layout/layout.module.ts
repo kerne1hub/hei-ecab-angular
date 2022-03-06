@@ -1,18 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { PublicLayoutPageComponent } from './layout.component';
+import { PublicLayoutComponent } from './layout.component';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { AppHeaderModule } from '@shared/app-header';
 
 @NgModule({
   declarations: [
-    PublicLayoutPageComponent
+    PublicLayoutComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    TranslateModule
+    TranslateModule,
+    AppHeaderModule
+  ],
+  exports: [
+    PublicLayoutComponent
   ],
   providers: []
 })
-export class PublicLayoutPageModule { }
+export class PublicLayoutModule { }

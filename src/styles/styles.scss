@@ -19,6 +19,8 @@ body, html {background: #f4f4f4; color: #000; font-size: 14px; font-family: $fon
   &-facebook {background-image: url(/assets/images/facebook.svg); mask-image: url(/assets/images/facebook.svg);}
   &-telegram {background-image: url(/assets/images/telegram.svg); mask-image: url(/assets/images/telegram.svg);}
   &-instagram {background-image: url(/assets/images/instagram.svg); mask-image: url(/assets/images/instagram.svg);}
+  &-account {background-image: url(/assets/images/account.svg); mask-image: url(/assets/images/account.svg);}
+  &-password {background-image: url(/assets/images/password.svg); mask-image: url(/assets/images/password.svg);}
 }
 
 /* links */
@@ -71,4 +73,111 @@ input, textarea, select {filter: none;}
   &-50 {width: 50%; flex: 0 0 50%;}
   &-66 {width: 66.6%; flex: 0 0 66.6%;}
   &-75 {width: 75%; flex: 0 0 75%;}
+}
+
+/* forms */
+.form {
+  &-group {position: relative; margin-bottom: $small;
+    &-labeled {
+      .form-control {
+        &-icon, &-action {
+          &-right, &-left {top: 25px;}
+        }
+      }
+    }
+    .label-row {display: flex; color: $ink-50;
+      &-spacer {flex: 1 1 auto;}
+    }
+    &-label {position: relative; display: block; margin-bottom: 8px; color: $ink-50;
+      font-weight: 500; pointer-events: none;
+      &.required:after {content: '*'; color: $destructive; position: relative;}
+    }
+    .form-radio {display: inline-block; margin-right: 16px;
+      &:last-child {margin-right: 0;}
+    }
+    .textarea-wrapper {position: relative;
+      textarea {height: 120px; resize: vertical; display: block;
+        &::-webkit-resizer {display: none;}
+      }
+      &:before, &:after {content: ''; position: absolute; pointer-events: none;}
+      &:before {bottom: 2px; right: 2px; height: 16px; width: 16px;
+        background-color: transparent;
+      }
+      &:after {bottom: 0; right: 3px; width: 0; height: 0; border: 6px solid transparent;
+        border-left-color: $ink-65; border-right: none; transform: rotate(45deg);
+      }
+    }
+  }
+  &-control {width: 100%; padding: 8px 12px; border: 1px solid $ink-80; border-radius: 3px;
+    min-height: 36px; max-width: 100%; color: $ink; line-height: 18px; transition: all 0.2s;
+    &:hover {border-color: $ink-65;}
+    &:focus {border-color: $primary; box-shadow: 0 0 2px $primary;}
+    &:disabled {background-color: $paper-95; pointer-events: none;}
+    &::placeholder,
+    &::-webkit-input-placeholder {color: $ink-65;}
+    &-success, &-success:hover {border-color: $positive; box-shadow: none;}
+    &-error {
+      &, &:hover, &:focus {border-color: $destructive; box-shadow: none;}
+    }
+    &-iconic {
+      &-left {padding-left: 42px;}
+      &-right {padding-right: 32px;}
+    }
+    &-icon {
+      &-left, &-right {position: absolute; top: 0; margin: 10px; pointer-events: none;}
+      &-left {left: 0;}
+      &-right {right: 0;}
+    }
+    &-action {
+      &-left, &-right {position: absolute; top: 0; margin: 10px; cursor: pointer;
+        .icon:hover {background-color: $ink-50;}
+      }
+      &-left {left: 0;}
+      &-right {right: 0;}
+    }
+    &-spacer {position: absolute; left: 36px; top: 26px; width: 1px; height: 32px; background: $ink-65;}
+  }
+  &-control::-ms-input-placeholder {color: $ink-65;}
+  &-helper {width: fit-content; position: relative; padding: 4px 8px;
+    background-color: $primary-80; border-radius: 3px; font-size: $tiny;
+    color: #fff; margin: 6px auto 0;
+    &::before {content: ''; width: 8px; height: 8px; position: absolute; top: 0;
+      left: 50%; transform: translate(-50%, -50%) rotate(45deg);
+      background-color: inherit;
+    }
+    &-success {color: $ink-50;}
+    &-error {background-color: $destructive;}
+  }
+  &-control, &-group * {
+    & ~ validation-errors .form-helper-error {pointer-events: none;
+      position: absolute; top: 100%; left: 0; right: 0; z-index: 3;
+      text-align: center;
+    }
+  }
+  &-buttons {margin: 24px 0;}
+  &-errors, &-messages {
+    .form-error {background-color: $destructive-bg; color: $destructive-text;
+      &::before {background-color: $destructive;}
+      &-message {margin-bottom: 0.67rem;
+        &:last-of-type {margin: 0;}
+      }
+    }
+    .form-warn {background-color: $prominent-80; color: $prominent-text;
+      &::before {background-color: $prominent;}
+    }
+    .form-success {background-color: $positive-80; color: $positive-text;
+      &::before {background-color: $positive;}
+    }
+  }
+  &-error,
+  &-warn,
+  &-success {position: relative; padding: 8px 16px; border-radius: 4px; color: #fff;
+    line-height: 21px; overflow: hidden;
+    &::before {content: ''; position: absolute; top: 0;left: 0; bottom: 0; width: 4px;}
+    a {color: inherit !important;}
+  }
+  &-note {color: $destructive-note; font-size: $small;}
+  &-action {cursor: pointer; background-color: $paper-100; color: $primary;}
+  .row {margin: 0 -6px;}
+  .col {padding: 0 6px;}
 }

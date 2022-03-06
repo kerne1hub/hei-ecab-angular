@@ -1,0 +1,27 @@
+@import 'vars';
+
+:host ::ng-deep .login {display: flex; flex-direction: column; min-height: 100vh;
+  &-content {display: flex; flex-direction: column; align-items: center; flex: auto; padding: 63px 37px 128px 37px;}
+  &-logo {transform: scale(2); line-height: 38px;
+    .icon {width: 72px; height: 19px;}
+  }
+  &-title {font-size: $large; color: $primary; text-align: center; margin-bottom: 1.5em;}
+  &-form {filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.1)); background: $paper-100; margin: 72px 0 16px 0;
+    border: 2px solid $primary; border-radius: 4px;
+    .form-group {margin-bottom: 2em;}
+    .button {width: 100%; margin-bottom: 48px;}
+  }
+  &-container {width: 348px; padding: 40px 40px 0;}
+  &-links {display: flex; justify-content: space-evenly; background: $paper-95; padding: 18px 0;}
+  &-footer {display: flex; flex-wrap: wrap; justify-content: space-around; width: 428px; margin: 0 auto;
+    padding: 22px 0 13px 0; border-top: 1px solid $ink-50;
+    .login-link {line-height: 1.5em; color: $ink-50;}
+  }
+
+  @media(max-width: 480px) {
+    &-content {}
+    &-container {width: unset; padding: 20px 20px 0;}
+    &-footer {width: unset;}
+    &-links {flex-wrap: wrap; padding: 10px 20px;}
+  }
+}

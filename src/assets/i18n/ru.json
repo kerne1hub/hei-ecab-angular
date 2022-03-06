@@ -6,9 +6,36 @@
         "TEXT_LINK_DESCRIPTION": "Зарегистрируйтесь чтобы начать пользоваться сервисом",
         "BUTTON_REGISTER": "Зарегистрироваться"
       }
+    },
+    "LOGIN": {
+      "FORM": {
+        "TEXT_TITLE": "Вход",
+        "TEXT_EMAIL_PLACEHOLDER": "Email",
+        "TEXT_EMAIL_LABEL": "Email адрес",
+        "TEXT_PASSWORD_PLACEHOLDER": "Пароль",
+        "TEXT_PASSWORD_LABEL": "Пароль",
+        "BUTTON_LOGIN": "Войти",
+        "TEXT_NEW_USER": "Не зарегистрированы?",
+        "TEXT_REGISTER": "Зарегистрироваться"
+      },
+      "ERRORS": {
+        "TEXT_EMAIL_IS_INVALID": "Некорректный Email",
+        "TEXT_EMAIL_IS_REQUIRED": "Введите Email",
+        "TEXT_INCORRECT_EMAIL_OR_PASSWORD": "Неверный Email или пароль",
+        "TEXT_PASSWORD_IS_REQUIRED": "Введите пароль"
+      },
+      "FOOTER": {
+        "TEXT_TERMS_OF_USE": "Условия использования",
+        "TEXT_PRIVACY_POLICY": "Политика конфиденциальности",
+        "TEXT_COPYRIGHT": "© 2022 Kernel"
+      },
+      "TEXT_FORGOT_PASSWORD": "Забили пароль?"
     }
   },
   "SHARED": {
+    "APP_HEADER": {
+      "TEXT_APP": "/ heiecab"
+    },
     "HOME_HEADER": {
       "TEXT_INFO": "Информация",
       "TEXT_LOGIN": "Войти"

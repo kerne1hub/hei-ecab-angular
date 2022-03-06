@@ -1,0 +1,55 @@
+<div [ngClass]="{ 'form-group-labeled': label || (maxLength >= 0) }" class="form-group">
+  <div class="label-row">
+    <label
+      *ngIf="label"
+      [for]="controlState.id"
+      [ngClass]="{ 'required': isRequired }"
+      class="form-group-label">
+      {{ label }}
+    </label>
+    <div class="label-row-spacer"></div>
+    <span *ngIf="maxLength >= 0">{{ controlState.value?.length || 0 }}/{{ maxLength }}</span>
+  </div>
+  <ng-container *ngIf="leftIcon && !leftActionIcon">
+    <span class="form-control-icon-left icon icon-{{ leftIcon }}"></span>
+    <span class="form-control-spacer"></span>
+  </ng-container>
+  <a
+    *ngIf="leftActionIcon"
+    (click)="leftActionTriggered.emit()"
+    data-testid="form-control-action-left"
+    class="form-control-action-left">
+    <span class="icon icon-mask icon-{{ leftActionIcon }}"></span>
+  </a>
+  <input
+    [ngrxFormControlState]="controlState"
+    [type]="type"
+    [autocomplete]="autocomplete"
+    [placeholder]="placeholder"
+    [attr.maxLength]="maxLength"
+    [attr.min]="min"
+    [attr.data-testid]="dataTestID"
+    [attr.role]="fieldRole"
+    [imask]="mask"
+    [unmask]="isUnmaskValue"
+    [ngClass]="{
+      'form-control-error': controlState.isSubmitted && controlState.isInvalid,
+      'form-control-iconic-left': leftIcon || leftActionIcon,
+      'form-control-iconic-right': rightIcon || rightActionIcon
+    }"
+    (ngrxFormsAction)="controlStateActionTriggered.emit($event)"
+    class="form-control">
+  <ng-container *ngIf="!rightActionIcon && isIconShown">
+    <span
+      *ngIf="rightIcon"
+      class="form-control-icon-right icon icon-{{ rightIcon }}">
+    </span>
+  </ng-container>
+  <a
+    *ngIf="rightActionIcon"
+    (click)="rightActionTriggered.emit()"
+    data-testid="form-control-action-right"
+    class="form-control-action-right">
+    <span class="icon icon-mask icon-{{ rightActionIcon }}"></span>
+  </a>
+</div>

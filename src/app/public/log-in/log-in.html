@@ -1,0 +1,55 @@
+<div class="login">
+  <public-layout></public-layout>
+  <div class="login-content">
+    <div class="login-logo">
+      <span class="icon icon-logo"></span>
+    </div>
+    <form *ngrxLet="formState$; let formState"
+          [ngrxFormState]="formState"
+          (submit)="formSubmitted()"
+          (ngrxFormsAction)="formActionTriggered($event)"
+          class="login-form"
+          role="form">
+      <div class="login-container">
+        <div class="login-title">{{ 'PUBLIC.LOGIN.FORM.TEXT_TITLE' | translate }}</div>
+        <form-text
+          [controlState]="formState.controls.email"
+          [isIconShown]="true"
+          [placeholder]="'PUBLIC.LOGIN.FORM.TEXT_EMAIL_PLACEHOLDER' | translate"
+          [validationMessages]="{
+          required: 'PUBLIC.LOGIN.ERRORS.TEXT_EMAIL_IS_REQUIRED' | translate,
+          email: 'PUBLIC.LOGIN.ERRORS.TEXT_EMAIL_IS_INVALID' | translate
+        }"
+          [label]="'PUBLIC.LOGIN.FORM.TEXT_EMAIL_LABEL' | translate"
+          [leftIcon]="'account'"
+          type="email"
+          autocomplete="email">
+        </form-text>
+        <form-password
+          [controlState]="formState.controls.password"
+          [isIconShown]="true"
+          [placeholder]="'PUBLIC.LOGIN.FORM.TEXT_PASSWORD_PLACEHOLDER' | translate"
+          [validationMessages]="{
+          required: 'PUBLIC.LOGIN.ERRORS.TEXT_PASSWORD_IS_REQUIRED' | translate
+        }"
+          [label]="'PUBLIC.LOGIN.FORM.TEXT_PASSWORD_LABEL' | translate"
+          [leftIcon]="'password'"
+          (controlStateActionTriggered)="formActionTriggered($event)"
+          autocomplete="current-password"
+          role="textbox">
+        </form-password>
+        <button type="submit" class="button button-primary">{{ 'PUBLIC.LOGIN.FORM.BUTTON_LOGIN' | translate }}</button>
+      </div>
+      <footer class="login-links">
+        <span class="login-text">{{ 'PUBLIC.LOGIN.FORM.TEXT_NEW_USER' | translate }}</span>
+        <a class="login-link">{{ 'PUBLIC.LOGIN.FORM.TEXT_REGISTER' | translate }}</a>
+      </footer>
+    </form>
+    <a class="login-link">{{ 'PUBLIC.LOGIN.TEXT_FORGOT_PASSWORD' | translate }}</a>
+  </div>
+  <footer class="login-footer">
+    <a class="login-link">{{ 'PUBLIC.LOGIN.FOOTER.TEXT_TERMS_OF_USE' | translate }}</a>
+    <a class="login-link">{{ 'PUBLIC.LOGIN.FOOTER.TEXT_PRIVACY_POLICY' | translate }}</a>
+    <span class="login-link">{{ 'PUBLIC.LOGIN.FOOTER.TEXT_COPYRIGHT' | translate }}</span>
+  </footer>
+</div>
