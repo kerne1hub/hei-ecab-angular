@@ -3,5 +3,8 @@ export const configuration = {
   language: {
     available: ['ru, en'],
     default: 'ru'
+  },
+  recaptcha: {
+    siteKey: '6LctkcUeAAAAALXThc3ZZwDp658jrUsNQog_ASSM'
   }
 };
