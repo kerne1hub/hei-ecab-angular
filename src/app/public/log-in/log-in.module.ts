@@ -4,7 +4,6 @@ import { PublicLogInPageComponent } from './log-in.component';
 import { PublicLogInPageRoutingModule } from './log-in.routing';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { PublicLogInPageFacade } from './log-in.facade';
 import { AppHeaderModule } from '@shared/app-header';
 import { ReactiveComponentModule } from '@ngrx/component';
 import { PublicLayoutModule } from '@app/public/shared/layout';
@@ -28,8 +27,6 @@ import { FormPasswordModule } from '@shared/form-password';
     NgrxFormsModule,
     FormPasswordModule
   ],
-  providers: [
-    PublicLogInPageFacade
-  ]
+  providers: []
 })
 export class PublicLogInPageModule { }

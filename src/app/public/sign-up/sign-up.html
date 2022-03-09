@@ -1,0 +1,96 @@
+<div class="signup">
+  <public-layout></public-layout>
+  <div class="signup-content">
+    <div class="signup-logo">
+      <span class="icon icon-logo"></span>
+      <a class="signup-link">{{ 'PUBLIC.SIGNUP.FORM.TEXT_LOGIN_LINK' | translate }}</a>
+      <button class="button button-secondary button-transparent">{{ 'PUBLIC.SIGNUP.FORM.TEXT_LOGIN' | translate }}</button>
+    </div>
+    <div class="signup-description">
+      <div class="signup-container">
+        <div class="signup-title">{{ 'PUBLIC.SIGNUP.FORM.TEXT_TITLE' | translate }}</div>
+        <section class="features">
+          <div class="features-item">
+            <div class="features-header">
+              <span class="icon icon-plan"></span>
+              <span class="features-title">{{ 'PUBLIC.SIGNUP.FEATURES.TEXT_TITLE_EDUCATION' | translate }}</span>
+            </div>
+            <div class="features-description">{{ 'PUBLIC.SIGNUP.FEATURES.TEXT_DESCRIPTION_EDUCATION' | translate }}</div>
+          </div>
+          <div class="features-item">
+            <div class="features-header">
+              <span class="icon icon-list"></span>
+              <span class="features-title">{{ 'PUBLIC.SIGNUP.FEATURES.TEXT_TITLE_TASKBASE' | translate }}</span>
+            </div>
+            <div class="features-description">{{ 'PUBLIC.SIGNUP.FEATURES.TEXT_DESCRIPTION_TASKBASE' | translate }}</div>
+          </div>
+          <div class="features-item">
+            <div class="features-header">
+              <span class="icon icon-case"></span>
+              <span class="features-title">{{ 'PUBLIC.SIGNUP.FEATURES.TEXT_TITLE_PORTFOLIO' | translate }}</span>
+            </div>
+            <div class="features-description">{{ 'PUBLIC.SIGNUP.FEATURES.TEXT_DESCRIPTION_PORTFOLIO' | translate }}</div>
+          </div>
+        </section>
+        <form
+          *ngrxLet="formState$; let formState"
+          [ngrxFormState]="formState"
+          (submit)="formSubmitted()"
+          (ngrxFormsAction)="formActionTriggered($event)"
+          class="signup-form"
+          role="form">
+          <div class="signup-container">
+            <form-text
+              [controlState]="formState.controls.firstName"
+              [isRequired]="true"
+              [placeholder]="'PUBLIC.SIGNUP.FORM.TEXT_FIRSTNAME_PLACEHOLDER' | translate"
+              [validationMessages]="{
+                required: 'PUBLIC.SIGNUP.ERRORS.TEXT_FIRSTNAME_IS_REQUIRED' | translate,
+                email: 'PUBLIC.SIGNUP.ERRORS.TEXT_FIRSTNAME_IS_INVALID' | translate
+              }"
+              [label]="'PUBLIC.SIGNUP.FORM.TEXT_FIRSTNAME_LABEL' | translate"
+              type="text"
+              autocomplete="text">
+            </form-text>
+            <form-text
+              [controlState]="formState.controls.lastName"
+              [isRequired]="true"
+              [placeholder]="'PUBLIC.SIGNUP.FORM.TEXT_LASTNAME_PLACEHOLDER' | translate"
+              [validationMessages]="{
+                required: 'PUBLIC.SIGNUP.ERRORS.TEXT_LASTNAME_IS_REQUIRED' | translate,
+                email: 'PUBLIC.SIGNUP.ERRORS.TEXT_LASTNAME_IS_INVALID' | translate
+              }"
+              [label]="'PUBLIC.SIGNUP.FORM.TEXT_LASTNAME_LABEL' | translate"
+              type="text"
+              autocomplete="text">
+            </form-text>
+            <form-text
+              [controlState]="formState.controls.email"
+              [isRequired]="true"
+              [placeholder]="'PUBLIC.SIGNUP.FORM.TEXT_EMAIL_PLACEHOLDER' | translate"
+              [validationMessages]="{
+                required: 'PUBLIC.SIGNUP.ERRORS.TEXT_EMAIL_IS_REQUIRED' | translate,
+                email: 'PUBLIC.SIGNUP.ERRORS.TEXT_EMAIL_IS_INVALID' | translate
+              }"
+              [label]="'PUBLIC.SIGNUP.FORM.TEXT_EMAIL_LABEL' | translate"
+              type="email"
+              autocomplete="email">
+            </form-text>
+            <div class="recaptcha-wrapper">
+              <ngx-recaptcha2
+                [ngrxFormControlState]="formState.controls.recaptcha"
+                [siteKey]="recaptchaSiteKey">
+              </ngx-recaptcha2>
+            </div>
+            <button type="submit" class="button button-primary">{{ 'PUBLIC.SIGNUP.FORM.BUTTON_SIGNUP' | translate }}</button>
+            <div class="signup-links">{{ 'PUBLIC.SIGNUP.FORM.TEXT_ACCEPT_1' | translate }}
+              <a>{{ 'PUBLIC.SIGNUP.FORM.TEXT_ACCEPT_2' | translate }}</a>
+              {{ 'PUBLIC.SIGNUP.FORM.TEXT_ACCEPT_3' | translate }}
+              <a>{{ 'PUBLIC.SIGNUP.FORM.TEXT_ACCEPT_4' | translate }}</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,39 +1,39 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PublicLogInPageState } from './log-in.state';
-import { ComponentStore } from '@ngrx/component-store';
-import { PublicLogInPageForm } from './shared/forms';
 import {
-  Actions, clearAsyncError,
+  Actions,
   disable,
   enable,
   formGroupReducer,
   FormGroupState,
-  markAsSubmitted, MarkAsSubmittedAction, SetValueAction,
+  markAsSubmitted,
+  MarkAsSubmittedAction,
+  SetValueAction,
   updateGroup,
   validate
 } from 'ngrx-forms';
+import { ComponentStore } from '@ngrx/component-store';
+import { PublicSignUpPageState } from './sign-up.state';
+import { PublicSignUpPageForm } from './shared/forms';
 import { email, required } from 'ngrx-forms/validation';
-import { PublicLogInServerErrorCode } from './shared/enums';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Injectable()
-export class PublicLogInPageFacade {
+export class PublicSignUpPageFacade {
   public get isSubmitting$(): Observable<boolean> {
     return this.componentStore.select((state) => state.isSubmitting);
   }
 
-  public get formState$(): Observable<FormGroupState<PublicLogInPageForm>> {
+  public get formState$(): Observable<FormGroupState<PublicSignUpPageForm>> {
     return this.componentStore.select((state) => state.formState);
   }
 
-  public get isLoginFailed$(): Observable<boolean> {
-    return this.componentStore.select((state) => state.isLoginFailed);
+  public get errorResponse$(): Observable<HttpErrorResponse> {
+    return this.componentStore.select((state) => state.errorResponse);
   }
 
-  private tryLogInEffect$: () => Observable<void>;
-
   constructor(
-    private readonly componentStore: ComponentStore<PublicLogInPageState>
+    private readonly componentStore: ComponentStore<PublicSignUpPageState>
   ) {
     this.resetState();
     this.validateForm();
@@ -43,7 +43,7 @@ export class PublicLogInPageFacade {
     this.updateFormState(action);
 
     if (action instanceof SetValueAction) {
-      this.clearFormStateErrors();
+      this.clearStateErrors();
     }
 
     if (action instanceof MarkAsSubmittedAction) {
@@ -54,36 +54,30 @@ export class PublicLogInPageFacade {
   }
 
   public resetState(): void {
-    this.componentStore.setState(new PublicLogInPageState());
+    this.componentStore.setState(new PublicSignUpPageState());
   }
 
   private validateForm(): void {
     this.componentStore.updater(
       (state) => ({
         ...state,
-        formState: updateGroup<PublicLogInPageForm>(
+        formState: updateGroup<PublicSignUpPageForm>(
           state.formState,
           {
-            email: validate<string>(required, email),
-            password: validate<string>(required)
+            firstName: validate<string>(required),
+            lastName: validate<string>(required),
+            email: validate<string>(required, email)
           }
         )
       })
     )();
   }
 
-  private clearFormStateErrors(): void {
+  private clearStateErrors(): void {
     this.componentStore.updater(
       (state) => ({
         ...state,
-        isLoginFailed: false,
-        formState: updateGroup<PublicLogInPageForm>(
-          state.formState,
-          {
-            email: clearAsyncError(PublicLogInServerErrorCode.INVALID_CREDENTIALS),
-            password: clearAsyncError(PublicLogInServerErrorCode.INVALID_CREDENTIALS)
-          }
-        )
+        errorResponse: null
       })
     )();
   }

@@ -17,9 +17,9 @@
           [isIconShown]="true"
           [placeholder]="'PUBLIC.LOGIN.FORM.TEXT_EMAIL_PLACEHOLDER' | translate"
           [validationMessages]="{
-          required: 'PUBLIC.LOGIN.ERRORS.TEXT_EMAIL_IS_REQUIRED' | translate,
-          email: 'PUBLIC.LOGIN.ERRORS.TEXT_EMAIL_IS_INVALID' | translate
-        }"
+            required: 'PUBLIC.LOGIN.ERRORS.TEXT_EMAIL_IS_REQUIRED' | translate,
+            email: 'PUBLIC.LOGIN.ERRORS.TEXT_EMAIL_IS_INVALID' | translate
+          }"
           [label]="'PUBLIC.LOGIN.FORM.TEXT_EMAIL_LABEL' | translate"
           [leftIcon]="'account'"
           type="email"
@@ -30,8 +30,8 @@
           [isIconShown]="true"
           [placeholder]="'PUBLIC.LOGIN.FORM.TEXT_PASSWORD_PLACEHOLDER' | translate"
           [validationMessages]="{
-          required: 'PUBLIC.LOGIN.ERRORS.TEXT_PASSWORD_IS_REQUIRED' | translate
-        }"
+            required: 'PUBLIC.LOGIN.ERRORS.TEXT_PASSWORD_IS_REQUIRED' | translate
+          }"
           [label]="'PUBLIC.LOGIN.FORM.TEXT_PASSWORD_LABEL' | translate"
           [leftIcon]="'password'"
           (controlStateActionTriggered)="formActionTriggered($event)"

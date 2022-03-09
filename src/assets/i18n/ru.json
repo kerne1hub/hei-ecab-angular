@@ -30,6 +30,32 @@
         "TEXT_COPYRIGHT": "© 2022 Kernel"
       },
       "TEXT_FORGOT_PASSWORD": "Забили пароль?"
+    },
+    "SIGNUP": {
+      "FORM": {
+        "TEXT_TITLE": "Регистрация нового пользователя",
+        "TEXT_LOGIN_LINK": "Уже зарегистрированы?",
+        "TEXT_LOGIN": "Войти",
+        "TEXT_FIRSTNAME_LABEL": "Имя",
+        "TEXT_LASTNAME_LABEL": "Фамилия",
+        "TEXT_EMAIL_LABEL": "Email",
+        "TEXT_FIRSTNAME_PLACEHOLDER": "Имя",
+        "TEXT_LASTNAME_PLACEHOLDER": "Фамилия",
+        "TEXT_EMAIL_PLACEHOLDER": "Email",
+        "BUTTON_SIGNUP": "Зарегистрироваться",
+        "TEXT_ACCEPT_1": "Регистрируясь, вы подтверждаете, что согласны с ",
+        "TEXT_ACCEPT_2": "Условиями использования ",
+        "TEXT_ACCEPT_3": "и нашей ",
+        "TEXT_ACCEPT_4": "Политикой конфиденциальности"
+      },
+      "FEATURES": {
+        "TEXT_TITLE_EDUCATION": "Учебный процесс",
+        "TEXT_DESCRIPTION_EDUCATION": "Управляйте учебным процессом: учебный план, индивидуальная рейтинговая система, успеваемость, посещаемость и статистика",
+        "TEXT_TITLE_TASKBASE": "База заданий",
+        "TEXT_DESCRIPTION_TASKBASE": "Доступ к общей и индивидуальной базе заданий. Выдача заданий обучающимся.",
+        "TEXT_TITLE_PORTFOLIO": "Портфолио",
+        "TEXT_DESCRIPTION_PORTFOLIO": "Формирование портфолио обучающегося на основе выполненных заданий."
+      }
     }
   },
   "SHARED": {

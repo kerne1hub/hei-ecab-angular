@@ -21,6 +21,8 @@ body, html {background: #f4f4f4; color: #000; font-size: 14px; font-family: $fon
   &-instagram {background-image: url(/assets/images/instagram.svg); mask-image: url(/assets/images/instagram.svg);}
   &-account {background-image: url(/assets/images/account.svg); mask-image: url(/assets/images/account.svg);}
   &-password {background-image: url(/assets/images/password.svg); mask-image: url(/assets/images/password.svg);}
+  &-plan {background-image: url(/assets/images/plan.svg); mask-image: url(/assets/images/plan.svg);}
+  &-list {background-image: url(/assets/images/list.svg); mask-image: url(/assets/images/list.svg);}
 }
 
 /* links */
@@ -55,6 +57,7 @@ input, textarea, select {filter: none;}
     &:hover {background-color: #417FD7; color: #fff;}
     &:focus {background-color: #235AA9; border-color: #25457A; color: #fff;}
   }
+  &-transparent {background-color: transparent;}
 }
 
 .tile {background: $paper-100; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);}
