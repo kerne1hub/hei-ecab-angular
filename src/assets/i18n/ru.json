@@ -32,6 +32,27 @@
       "TEXT_FORGOT_PASSWORD": "Забили пароль?"
     },
     "SIGNUP": {
+      "CONFIRM": {
+        "FORM": {
+          "TEXT_TITLE": "Регистрация нового пользователя",
+          "TEXT_LOGIN_LINK": "Уже зарегистрированы?",
+          "TEXT_LOGIN": "Войти",
+          "TEXT_FIRSTNAME_LABEL": "Имя",
+          "TEXT_LASTNAME_LABEL": "Фамилия",
+          "TEXT_PATRONYMIC_LABEL": "Отчество",
+          "TEXT_BIRTHDATE_LABEL": "Дата рождения",
+          "TEXT_DOCUMENT_LABEL": "Удостоверяющий документ",
+          "TEXT_FIRSTNAME_PLACEHOLDER": "Имя",
+          "TEXT_LASTNAME_PLACEHOLDER": "Фамилия",
+          "TEXT_PATRONYMIC_PLACEHOLDER": "Отчество",
+          "TEXT_DAY_PLACEHOLDER": "дд",
+          "TEXT_MONTH_PLACEHOLDER": "мм",
+          "TEXT_YEAR_PLACEHOLDER": "гггг",
+          "TEXT_SERIES_OF_DOCUMENT_PLACEHOLDER": "Серия",
+          "TEXT_NUMBER_OF_DOCUMENT_PLACEHOLDER": "Номер",
+          "BUTTON_CONFIRM": "Подтвердить"
+        }
+      },
       "FORM": {
         "TEXT_TITLE": "Регистрация нового пользователя",
         "TEXT_LOGIN_LINK": "Уже зарегистрированы?",

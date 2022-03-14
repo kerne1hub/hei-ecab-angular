@@ -1,0 +1,143 @@
+<div class="confirm">
+  <public-layout></public-layout>
+  <div class="confirm-content">
+    <div class="confirm-logo">
+      <span class="icon icon-logo"></span>
+      <a class="confirm-link">{{ 'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_LOGIN_LINK' | translate }}</a>
+      <button class="button button-secondary button-transparent">{{ 'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_LOGIN' | translate }}</button>
+    </div>
+    <div class="confirm-container">
+      <form
+        *ngrxLet="formState$; let formState"
+        [ngrxFormState]="formState"
+        (submit)="formSubmitted()"
+        (ngrxFormsAction)="formActionTriggered($event)"
+        class="confirm-form"
+        role="form">
+        <div class="confirm-container">
+          <div class="confirm-title">{{ 'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_TITLE' | translate }}</div>
+          <form-text
+            [controlState]="formState.controls.firstName"
+            [isRequired]="true"
+            [placeholder]="'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_FIRSTNAME_PLACEHOLDER' | translate"
+            [validationMessages]="{
+              required: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_FIRSTNAME_IS_REQUIRED' | translate,
+              email: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_FIRSTNAME_IS_INVALID' | translate
+            }"
+            [label]="'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_FIRSTNAME_LABEL' | translate"
+            type="text"
+            autocomplete="text">
+          </form-text>
+          <form-text
+            [controlState]="formState.controls.lastName"
+            [isRequired]="true"
+            [placeholder]="'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_LASTNAME_PLACEHOLDER' | translate"
+            [validationMessages]="{
+              required: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_LASTNAME_IS_REQUIRED' | translate,
+              email: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_LASTNAME_IS_INVALID' | translate
+            }"
+            [label]="'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_LASTNAME_LABEL' | translate"
+            type="text"
+            autocomplete="text">
+          </form-text>
+          <form-text
+            [controlState]="formState.controls.patronymic"
+            [isRequired]="true"
+            [placeholder]="'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_PATRONYMIC_PLACEHOLDER' | translate"
+            [validationMessages]="{
+              required: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_PATRONYMIC_IS_REQUIRED' | translate,
+              email: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_PATRONYMIC_IS_INVALID' | translate
+            }"
+            [label]="'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_PATRONYMIC_LABEL' | translate"
+            type="text"
+            autocomplete="text">
+          </form-text>
+          <div class="confirm-birthdate">
+            <div class="label-row">
+              <label
+                [for]="formState.controls.dayOfBirth.id"
+                class="form-group-label required">
+                {{ 'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_BIRTHDATE_LABEL' | translate }}
+              </label>
+            </div>
+            <div class="col col-50">
+              <form-text
+                [controlState]="formState.controls.dayOfBirth"
+                [isRequired]="true"
+                [placeholder]="'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_DAY_PLACEHOLDER' | translate"
+                [validationMessages]="{
+                  required: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_DAY_IS_REQUIRED' | translate,
+                  email: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_DAY_IS_INVALID' | translate
+                }"
+                type="text"
+                class="control-day">
+              </form-text>
+              <form-text
+                [controlState]="formState.controls.monthOfBirth"
+                [isRequired]="true"
+                [placeholder]="'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_MONTH_PLACEHOLDER' | translate"
+                [validationMessages]="{
+                  required: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_MONTH_IS_REQUIRED' | translate,
+                  email: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_MONTH_IS_INVALID' | translate
+                }"
+                type="text"
+                class="control-month">
+              </form-text>
+              <form-text
+                [controlState]="formState.controls.yearOfBirth"
+                [isRequired]="true"
+                [placeholder]="'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_YEAR_PLACEHOLDER' | translate"
+                [validationMessages]="{
+                  required: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_YEAR_IS_REQUIRED' | translate,
+                  email: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_YEAR_IS_INVALID' | translate
+                }"
+                type="text"
+                class="control-year">
+              </form-text>
+            </div>
+          </div>
+          <div class="confirm-document">
+            <div class="label-row">
+              <label
+                [for]="formState.controls.dayOfBirth.id"
+                class="form-group-label required">
+                {{ 'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_BIRTHDATE_LABEL' | translate }}
+              </label>
+            </div>
+            <div class="col col-50">
+              <form-text
+                [controlState]="formState.controls.seriesOfDocument"
+                [isRequired]="true"
+                [placeholder]="'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_SERIES_OF_DOCUMENT_PLACEHOLDER' | translate"
+                [validationMessages]="{
+                  required: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_SERIES_OF_DOCUMENT_IS_REQUIRED' | translate,
+                  email: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_SERIES_OF_DOCUMENT_IS_INVALID' | translate
+                }"
+                [label]="'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_DOCUMENT_LABEL' | translate"
+                type="text"
+                class="control-series">
+              </form-text>
+              <form-text
+                [controlState]="formState.controls.numberOfDocument"
+                [isRequired]="true"
+                [placeholder]="'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_NUMBER_OF_DOCUMENT_PLACEHOLDER' | translate"
+                [validationMessages]="{
+                  required: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_NUMBER_OF_DOCUMENT_IS_REQUIRED' | translate,
+                  email: 'PUBLIC.SIGNUP.CONFIRM.ERRORS.TEXT_NUMBER_OF_DOCUMENT_IS_INVALID' | translate
+                }"
+                type="text"
+                class="control-number">
+              </form-text>
+            </div>
+          </div>
+          <button type="submit" class="button button-primary">{{ 'PUBLIC.SIGNUP.CONFIRM.FORM.BUTTON_CONFIRM' | translate }}</button>
+          <div class="confirm-links">{{ 'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_ACCEPT_1' | translate }}
+            <a>{{ 'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_ACCEPT_2' | translate }}</a>
+            {{ 'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_ACCEPT_3' | translate }}
+            <a>{{ 'PUBLIC.SIGNUP.CONFIRM.FORM.TEXT_ACCEPT_4' | translate }}</a>
+          </div>
+        </div>
+        </form>
+      </div>
+  </div>
+</div>

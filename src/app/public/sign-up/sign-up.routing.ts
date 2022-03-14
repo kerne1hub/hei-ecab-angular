@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: PublicSignUpPageComponent
+  },
+  {
+    path: 'confirm',
+    loadChildren: () => import('./confirm/confirm.module').then((module) => module.PublicSignUpConfirmPageModule)
   }
 ];
 

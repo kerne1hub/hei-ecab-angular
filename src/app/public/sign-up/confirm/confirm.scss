@@ -1,0 +1,34 @@
+@import 'vars';
+
+:host ::ng-deep .confirm {
+  &-content {display: flex; flex-direction: column; align-items: center; flex: auto; width: 50%; min-width: 800px;
+    box-sizing: border-box; padding: 63px 37px 128px 37px; margin: 0 auto;}
+  &-logo {display: flex; align-items: center; justify-content: space-evenly; width: 100%; line-height: 38px;
+    .icon {width: 72px; height: 19px; transform: scale(2) translateX(25%);}
+  }
+  &-link {margin: 0 8px 0 auto;}
+  &-form {background: $paper-100; border: 2px solid $primary; border-radius: 4px;
+    filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.1));
+    .signup-container {max-width: 370px; padding: 2rem;}
+  }
+  &-title {font-size: $large; color: $primary; text-align: center; margin-bottom: 1.5em;}
+  &-container {position: relative; padding: 4rem;
+    .form-group {margin-bottom: 2em;
+      .form-control {display: inline-block; width: 50%;}
+    }
+    .confirm-birthdate, .confirm-document {
+      .control-day, .control-month {width: 56px;}
+      .control-year {width: 112px;}
+      .control-series {width: 128px;}
+      .control-number {width: calc(100% - 140px);}
+      form-text {display: inline-block;
+        +form-text {margin-left: 12px;}
+        .form-control {width: auto;}
+        .label-row {display: none;}
+      }
+    }
+  }
+  .label-row {display: inline-block; width: 25%; text-align: end; padding-right: 12px; box-sizing: border-box;
+  vertical-align: middle}
+  .col {display: inline-block; padding: 0;}
+}
