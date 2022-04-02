@@ -19,7 +19,6 @@
   }
 
   @media(max-width: 480px) {
-    &-content {}
     &-container {width: unset; padding: 20px 20px 0;}
     &-footer {width: unset;}
     &-links {flex-wrap: wrap; padding: 10px 20px;}

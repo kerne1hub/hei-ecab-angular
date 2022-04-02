@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'confirm',
     loadChildren: () => import('./confirm/confirm.module').then((module) => module.PublicSignUpConfirmPageModule)
+  },
+  {
+    path: 'finish',
+    loadChildren: () => import('./finish/finish.module').then((module) => module.PublicSignUpFinishPageModule)
   }
 ];
 

@@ -1,0 +1,14 @@
+<div class="form-group">
+  <div class="checkbox">
+    <label>
+      <input
+        [ngrxFormControlState]="controlState"
+        [attr.data-testid]="dataTestID"
+        [attr.role]="fieldRole"
+        (ngrxFormsAction)="controlStateActionTriggered.emit($event)"
+        type="checkbox">
+      <span class="checkbox-icon"></span>
+      <span class="checkbox-label">{{ label }}</span>
+    </label>
+  </div>
+</div>

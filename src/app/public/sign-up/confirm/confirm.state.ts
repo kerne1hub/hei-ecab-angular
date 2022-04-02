@@ -18,7 +18,8 @@ export class PublicSignUpConfirmPageState {
       yearOfBirth: null,
       seriesOfDocument: null,
       numberOfDocument: null,
-      role: null
+      role: null,
+      agreement: false
     });
     this.errorResponse = null;
   }

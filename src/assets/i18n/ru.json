@@ -34,7 +34,7 @@
     "SIGNUP": {
       "CONFIRM": {
         "FORM": {
-          "TEXT_TITLE": "Регистрация нового пользователя",
+          "TEXT_TITLE": "Подтверждение регистрационных данных",
           "TEXT_LOGIN_LINK": "Уже зарегистрированы?",
           "TEXT_LOGIN": "Войти",
           "TEXT_FIRSTNAME_LABEL": "Имя",
@@ -42,6 +42,7 @@
           "TEXT_PATRONYMIC_LABEL": "Отчество",
           "TEXT_BIRTHDATE_LABEL": "Дата рождения",
           "TEXT_DOCUMENT_LABEL": "Удостоверяющий документ",
+          "TEXT_PERMISSIONS_LABEL": "Я даю разрешение на обработку моих персональных данных",
           "TEXT_FIRSTNAME_PLACEHOLDER": "Имя",
           "TEXT_LASTNAME_PLACEHOLDER": "Фамилия",
           "TEXT_PATRONYMIC_PLACEHOLDER": "Отчество",
@@ -51,6 +52,15 @@
           "TEXT_SERIES_OF_DOCUMENT_PLACEHOLDER": "Серия",
           "TEXT_NUMBER_OF_DOCUMENT_PLACEHOLDER": "Номер",
           "BUTTON_CONFIRM": "Подтвердить"
+        }
+      },
+      "FINISH": {
+        "FORM": {
+          "TEXT_TITLE": "Создание профиля пользователя",
+          "TEXT_SUBTITLE": "Регистрация успешно завершена",
+          "TEXT_DESCRIPTION": "На ваш адрес электронной почты example@mail.com отправлено письмо с данными для входа в личный кабинет.",
+          "TEXT_NOTICE": "Не забудьте сменить сгенерированный пароль на свой!",
+          "TEXT_LOGIN_PAGE_LINK": "Страница входа"
         }
       },
       "FORM": {

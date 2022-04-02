@@ -9,12 +9,15 @@
   &-link {margin: 0 8px 0 auto;}
   &-form {background: $paper-100; border: 2px solid $primary; border-radius: 4px;
     filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.1));
-    .signup-container {max-width: 370px; padding: 2rem;}
   }
   &-title {font-size: $large; color: $primary; text-align: center; margin-bottom: 1.5em;}
-  &-container {position: relative; padding: 4rem;
+  &-main {margin-top: 72px;}
+  &-container {padding: 4rem;
     .form-group {margin-bottom: 2em;
       .form-control {display: inline-block; width: 50%;}
+      .checkbox {text-align: center;
+        &-label {margin-left: 8px;}
+      }
     }
     .confirm-birthdate, .confirm-document {
       .control-day, .control-month {width: 56px;}
@@ -28,7 +31,27 @@
       }
     }
   }
+  &-permissions {text-align: center;
+    .button {width: 100%;}
+  }
   .label-row {display: inline-block; width: 25%; text-align: end; padding-right: 12px; box-sizing: border-box;
   vertical-align: middle}
   .col {display: inline-block; padding: 0;}
+
+  @media(max-width: 840px) {
+    &-content {width: 100%; min-width: unset; padding: 20px;}
+    &-container {padding: 1rem;}
+  }
+
+  @media(max-width: 480px) {
+    &-container {padding: 0.5rem;
+      .form-group {margin-bottom: 0.85rem;
+        .form-control {width: 100%; display: block;}
+      }
+      .col.col-50 {width: 100%;}
+    }
+    .label-row {display: flex; width: unset; text-align: unset;}
+    &-logo {justify-content: space-between;}
+    &-link {display: none;}
+  }
 }

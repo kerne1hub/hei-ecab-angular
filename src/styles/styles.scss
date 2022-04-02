@@ -7,7 +7,7 @@ body, html {background: #f4f4f4; color: #000; font-size: 14px; font-family: $fon
 }
 
 .icon {width: 16px; height: 16px; display: inline-block; vertical-align: text-top;
-  &-logo {background-image: url(/assets/images/logo.svg);}
+  &-logo {background-image: url(/assets/images/logo.svg); mask-image: url(/assets/images/logo.svg);}
   &-employee {background-image: url(/assets/images/employee.svg);}
   &-card {background-image: url(/assets/images/card.svg);}
   &-case {background-image: url(/assets/images/case.svg);}
@@ -23,6 +23,7 @@ body, html {background: #f4f4f4; color: #000; font-size: 14px; font-family: $fon
   &-password {background-image: url(/assets/images/password.svg); mask-image: url(/assets/images/password.svg);}
   &-plan {background-image: url(/assets/images/plan.svg); mask-image: url(/assets/images/plan.svg);}
   &-list {background-image: url(/assets/images/list.svg); mask-image: url(/assets/images/list.svg);}
+  &-success {background-image: url(/assets/images/success.svg); mask-image: url(/assets/images/success.svg);}
 }
 
 /* links */

@@ -10,4 +10,5 @@ export class PublicSignUpConfirmPageForm {
   public seriesOfDocument: number;
   public numberOfDocument: number;
   public role: UserRole;
+  public agreement: boolean;
 }

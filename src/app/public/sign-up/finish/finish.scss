@@ -1,0 +1,33 @@
+@import 'vars';
+
+:host .finish {
+  &-content {display: flex; flex-direction: column; align-items: center; flex: auto; padding: 63px 37px 128px 37px;}
+  &-logo {transform: scale(2); line-height: 38px;
+    .icon {width: 72px; height: 19px;}
+  }
+  &-title {font-size: $large; color: $primary; text-align: center; margin: 0 -20px 1.5em;}
+  &-form {filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.1)); background: $paper-100; margin: 72px 0 16px 0;
+    border: 2px solid $primary; border-radius: 4px;
+    .form-group {margin-bottom: 2em;}
+    .button {width: 100%; margin-bottom: 48px;}
+  }
+  &-container {width: 428px; padding: 40px; box-sizing: border-box;}
+  &-message {display: flex; align-items: center; justify-content: center; margin-bottom: 36px;
+    .icon {width: 48px; height: 48px;}
+  }
+  &-subtitle {font-size: $middle; margin-left: 8px;}
+  &-description {text-align: center; font-size: $normal;
+    .finish-text + .finish-text {margin-top: 1em;}
+  }
+  &-links {display: flex; justify-content: space-evenly; background: $paper-95; padding: 18px 0;}
+
+  @media(max-width: 480px) {
+    &-container {width: unset; padding: 20px;}
+    &-footer {width: unset;}
+    &-links {flex-wrap: wrap; padding: 10px 20px;}
+    &-message {flex-wrap: wrap;
+      .icon {min-width: 48px;}
+    }
+    &-subtitle {text-align: center; margin: unset;}
+  }
+}

@@ -8,6 +8,7 @@ import { PublicLayoutModule } from '@app/public/shared/layout';
 import { ReactiveComponentModule } from '@ngrx/component';
 import { NgrxFormsModule } from 'ngrx-forms';
 import { FormTextModule } from '@shared/form-text';
+import { FormCheckboxModule } from '@shared/form-checkbox';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormTextModule } from '@shared/form-text';
     PublicLayoutModule,
     ReactiveComponentModule,
     NgrxFormsModule,
-    FormTextModule
+    FormTextModule,
+    FormCheckboxModule
   ],
   providers: []
 })
