@@ -24,6 +24,17 @@ body, html {background: #f4f4f4; color: #000; font-size: 14px; font-family: $fon
   &-plan {background-image: url(/assets/images/plan.svg); mask-image: url(/assets/images/plan.svg);}
   &-list {background-image: url(/assets/images/list.svg); mask-image: url(/assets/images/list.svg);}
   &-success {background-image: url(/assets/images/success.svg); mask-image: url(/assets/images/success.svg);}
+  &-todo {background-image: url(/assets/images/todo.svg); mask-image: url(/assets/images/todo.svg);}
+  &-notification {background-image: url(/assets/images/notification.svg); mask-image: url(/assets/images/notification.svg);}
+  &-user {background-image: url(/assets/images/user.svg); mask-image: url(/assets/images/user.svg);}
+  &-toggle {background-image: url(/assets/images/toggle.svg); mask-image: url(/assets/images/toggle.svg);}
+  &-view {background-image: url(/assets/images/view.svg); mask-image: url(/assets/images/view.svg);}
+  &-profile {background-image: url(/assets/images/profile.svg); mask-image: url(/assets/images/profile.svg);}
+  &-schedule {background-image: url(/assets/images/schedule.svg); mask-image: url(/assets/images/schedule.svg);}
+  &-portfolio {background-image: url(/assets/images/portfolio.svg); mask-image: url(/assets/images/portfolio.svg);}
+  &-tasks {background-image: url(/assets/images/tasks.svg); mask-image: url(/assets/images/tasks.svg);}
+  &-book {background-image: url(/assets/images/book.svg); mask-image: url(/assets/images/book.svg);}
+  &-statistics {background-image: url(/assets/images/statistics.svg); mask-image: url(/assets/images/statistics.svg);}
 }
 
 /* links */

@@ -1,0 +1,13 @@
+@import 'vars';
+
+:host ::ng-deep .sidebar {position: fixed; width: $sidebar-width; top: $header-height; bottom: 0; left: 0; z-index: 600;
+  background: $paper-100; transition: width 0.3s, left 0.3s; box-sizing: border-box;
+  &-menu {list-style: none; margin: 0; padding: 4px;}
+  &-link {display: flex; width: 100%; color: $ink; padding: 8px 12px; border-radius: 4px;
+    box-sizing: border-box; margin-bottom: 1px;
+    &:hover {background: rgba(0, 0, 0, 0.05);}
+    &.active {background: rgba(0, 0, 0, 0.05); font-weight: 600;}
+    .badge {color: #0B5CAD; padding: 2px 8px; border-radius: 8px;}
+  }
+  &-label {flex: 1; margin-left: 8px;}
+}

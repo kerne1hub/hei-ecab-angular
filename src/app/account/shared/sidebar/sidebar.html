@@ -1,0 +1,68 @@
+<aside class="sidebar">
+  <ul class="sidebar-menu">
+    <li>
+      <a
+        [routerLink]="'./overview'"
+        routerLinkActive="active"
+        class="sidebar-link">
+        <span class="icon icon-view"></span>
+        <span class="sidebar-label">Обзор</span>
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]="'./data'"
+        routerLinkActive="active"
+        class="sidebar-link">
+        <span class="icon icon-profile"></span>
+        <span class="sidebar-label">Мои данные</span>
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]="'./schedule'"
+        routerLinkActive="active"
+        class="sidebar-link">
+        <span class="icon icon-schedule"></span>
+        <span class="sidebar-label">Расписание занятий</span>
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]="'./portfolio'"
+        routerLinkActive="active"
+        class="sidebar-link">
+        <span class="icon icon-portfolio"></span>
+        <span class="sidebar-label">Портфолио</span>
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]="'./tasks'"
+        routerLinkActive="active"
+        class="sidebar-link">
+        <span class="icon icon-tasks"></span>
+        <span class="sidebar-label">Задания</span>
+        <account-badge [count]="8" [color]="'#CBE2FA'"></account-badge>
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]="'./book'"
+        routerLinkActive="active"
+        class="sidebar-link">
+        <span class="icon icon-book"></span>
+        <span class="sidebar-label">Зачетная книжка</span>
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]="'./statistics'"
+        routerLinkActive="active"
+        class="sidebar-link">
+        <span class="icon icon-statistics"></span>
+        <span class="sidebar-label">Статистика</span>
+      </a>
+    </li>
+  </ul>
+</aside>

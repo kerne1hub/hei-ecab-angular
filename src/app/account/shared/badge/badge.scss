@@ -1,0 +1,5 @@
+@import 'vars';
+
+:host ::ng-deep .badge {display: inline-block; border-radius: 7px; font-size: $small; line-height: 12px; color: $paper-98;
+  padding: 1px 4px;
+}

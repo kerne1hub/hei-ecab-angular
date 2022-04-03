@@ -1,0 +1,25 @@
+<header class="header">
+  <div class="header-container">
+    <span class="icon icon-logo"></span>
+    <nav class="header-menu">
+      <button class="button header-todo">
+        <span class="icon icon-todo"></span>
+        <account-badge
+          [count]="12"
+          [color]="'#FD7E14'">
+        </account-badge>
+      </button>
+      <button class="button header-notification">
+        <span class="icon icon-notification"></span>
+        <account-badge
+          [count]="1"
+          [color]="'#2DA160'">
+        </account-badge>
+      </button>
+      <button class="button header-profile">
+        <span class="icon icon-user"></span>
+        <span class="icon icon-toggle"></span>
+      </button>
+    </nav>
+  </div>
+</header>
