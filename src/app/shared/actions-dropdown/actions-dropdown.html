@@ -1,0 +1,30 @@
+<div
+  [ngClass]="{ 'dropdown-left': position === 'left', 'dropdown-right': position === 'right' }"
+  [closeByClick]="closeByClick"
+  class="dropdown dropdown-actions"
+  dropdown>
+  <a class="dropdown-trigger">
+    <span class="icon icon-mask icon-{{ icon }}"></span>
+  </a>
+  <div class="dropdown-content">
+    <ng-container *ngFor="let button of buttons; trackByProperty">
+      <a
+        *ngIf="!button.hidden"
+        (click)="button.handler(entityID)"
+        [attr.data-testid]="button.dataTestID"
+        [ngClass]="{
+          'dropdown-item-caution': button.type === actionsDropdownButtonTypeEnum.CAUTION
+        }"
+        class="dropdown-item">
+        <span
+          *ngIf="button.icon && !button.isStatusIcon; else statusIcon"
+          class="icon icon-mask icon-{{ button.icon }}">
+        </span>
+        <ng-template #statusIcon>
+          <span class="icon icon-status icon-status-{{ button.icon }}"></span>
+        </ng-template>
+        <span class="dropdown-item-title">{{ button.title }}</span>
+      </a>
+    </ng-container>
+  </div>
+</div>

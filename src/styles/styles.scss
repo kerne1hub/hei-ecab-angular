@@ -196,3 +196,46 @@ input, textarea, select {filter: none;}
   .row {margin: 0 -6px;}
   .col {padding: 0 6px;}
 }
+
+/* dropdown */
+.dropdown {position: relative; display: inline-block; z-index: 2; line-height: normal;
+  &-content {background: #fff; position: absolute; width: 250px; top: 100%; left: 0;
+    text-align: left; opacity: 0; pointer-events: none; padding: 4px 3px;
+    border: 1px solid $ink-80; border-radius: 3px; box-sizing: border-box;
+    transition: all 0.3s; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    &-scrollable {overflow: hidden;}
+  }
+  &-trigger {line-height: 18px;}
+  &-open {z-index: 5;
+    .dropdown-content {top: 100%; opacity: 1; z-index: 1;
+      pointer-events: auto;
+    }
+  }
+  &-right .dropdown-content {left: auto; right: 0;}
+  &-item {display: block; max-width: 100%; padding: 8px; border-radius: 2px;
+    box-sizing: border-box; color: $ink; white-space: nowrap; overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover {background: $paper-95;}
+    &:last-of-type {border-bottom: 0;}
+    &-caution {color: $destructive;
+      .icon {background-color: $destructive; transition: all 0.3s;}
+      &:hover {background-color: $destructive; color: #fff;
+        .icon {background-color: #fff;}
+      }
+    }
+    &-info {font-weight: 600;}
+    &.disabled {pointer-events: none; position: relative;}
+    &-separator {height: 1px; width: 100%; background: $ink-80; margin: 4px 0; box-sizing: border-box;}
+  }
+  &-scroll {max-height: 226px; overflow: hidden; overflow-y: scroll; scrollbar-width: none;
+    &::-webkit-scrollbar {display: none;}
+  }
+  &-reset {position: absolute; top: 10px; right: 26px;
+    .icon {background-color: $ink-80;
+      &:hover {background-color: $ink-50;}
+    }
+  }
+  &.disabled {background-color: $paper-95; pointer-events: none;
+    input {background-color: $paper-95;}
+  }
+}

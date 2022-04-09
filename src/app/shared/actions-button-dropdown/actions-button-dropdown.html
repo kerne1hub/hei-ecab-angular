@@ -1,0 +1,46 @@
+<div
+  [ngClass]="{
+    'dropdown-left': position === 'left',
+    'dropdown-right': position === 'right',
+    'disabled': isDisabled
+  }"
+  [closeByClick]="closeByClick"
+  class="dropdown dropdown-actions-button"
+  dropdown>
+  <a class="dropdown-trigger">
+    <button
+      [ngClass]="{
+        'button-primary': isPrimary,
+        'button-loading': isLoading
+      }"
+      [disabled]="isDisabled"
+      class="button">
+      <span *ngIf="icon" class="icon icon-{{ icon }}"></span>
+      {{ placeholder }}
+      <span class="icon icon-mask icon-toggle"></span>
+    </button>
+  </a>
+  <div class="dropdown-content">
+    <ng-container *ngFor="let button of buttons; trackByProperty: 'title'">
+      <a
+        *ngIf="!button.hidden"
+        (click)="handleClick(button)"
+        [attr.data-testid]="button.dataTestID"
+        [ngClass]="{
+          'dropdown-item-caution': button.type === actionsDropdownButtonTypeEnum.CAUTION,
+          'dropdown-item-info': button.type === actionsDropdownButtonTypeEnum.INFO,
+          'separated': button.withSeparator,
+          'disabled': button.disabled
+        }"
+        [tippyName]="button.title"
+        [tippyProps]="tooltipProps"
+        [ngxTippy]="button.tooltip"
+        class="dropdown-item">
+        <span *ngIf="button.icon" class="icon icon-mask icon-{{ button.icon }}"></span>
+        <span class="dropdown-item-title">{{ button.title }}</span>
+        <span *ngIf="button.disabled && button.reasonForDisabling" class="dropdown-item-reason">{{ button.reasonForDisabling }}</span>
+      </a>
+      <div *ngIf="button.withSeparator" class="dropdown-item-separator"></div>
+    </ng-container>
+  </div>
+</div>

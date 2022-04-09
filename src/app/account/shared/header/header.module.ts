@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AccountHeaderComponent } from './header.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { AccountBadgeModule } from '../badge';
+import { ActionsButtonDropdownModule } from "@shared/actions-button-dropdown";
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { AccountBadgeModule } from '../badge';
   imports: [
     CommonModule,
     TranslateModule,
-    AccountBadgeModule
+    AccountBadgeModule,
+    ActionsButtonDropdownModule
   ],
   exports: [
     AccountHeaderComponent

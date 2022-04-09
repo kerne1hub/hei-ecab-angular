@@ -1,0 +1,16 @@
+@import 'vars';
+
+:host ::ng-deep .dropdown-actions {
+  .dropdown-content {min-width: 140px; width: auto;}
+  .dropdown-item {
+    &-title {margin: 0 8px;}
+  }
+  &.dropdown-open {
+    .dropdown {
+      &-trigger {background-color: $primary;
+        .icon {background-color: #fff;}
+      }
+      &-content {margin-top: 6px;}
+    }
+  }
+}

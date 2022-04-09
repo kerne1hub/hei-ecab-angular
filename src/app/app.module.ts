@@ -9,6 +9,7 @@ import { routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppState } from '@shared/store';
+import { NgxTippyModule } from 'ngx-tippy-wrapper';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AppState } from '@shared/store';
     StoreDevtoolsModule.instrument({
       maxAge: 30,
       logOnly: false
-    })
+    }),
+    NgxTippyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

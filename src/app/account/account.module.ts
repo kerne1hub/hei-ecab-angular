@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AccountBadgeModule } from './shared/badge';
 import { AccountSidebarModule } from './shared/sidebar';
 import { AccountHeaderModule } from './shared/header';
+import { ActionsButtonDropdownModule } from '@shared/actions-button-dropdown';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AccountHeaderModule } from './shared/header';
     AccountRoutingModule,
     AccountBadgeModule,
     AccountSidebarModule,
-    AccountHeaderModule
+    AccountHeaderModule,
+    ActionsButtonDropdownModule
   ]
 })
 export class AccountModule { }

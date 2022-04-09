@@ -16,10 +16,14 @@
           [color]="'#2DA160'">
         </account-badge>
       </button>
-      <button class="button header-profile">
-        <span class="icon icon-user"></span>
-        <span class="icon icon-toggle"></span>
-      </button>
+<!--      <button class="button header-profile">-->
+<!--        <span class="icon icon-user"></span>-->
+<!--        <span class="icon icon-toggle"></span>-->
+<!--      </button>-->
+      <actions-button-dropdown
+        [buttons]="profileActionButtons"
+        icon="user">
+      </actions-button-dropdown>
     </nav>
   </div>
 </header>
