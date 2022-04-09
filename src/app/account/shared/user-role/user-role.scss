@@ -1,0 +1,10 @@
+@import 'vars';
+
+:host .user-role {width: fit-content; padding: 1px 4px; border-radius: 3px; color: #fff;
+  font-size: 0.71rem; line-height: 15px; box-sizing: border-box; white-space: nowrap;
+  &.admin {background-color: $prominent;}
+  &.controller {background-color: $paper-95; color: $ink-50;}
+  &.student {background-color: $primary;}
+  &.lecturer {background-color: $positive;}
+  &.support {background-color: #fff; color: $ink-50; border: 1px solid $ink-50;}
+}

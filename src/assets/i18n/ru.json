@@ -89,6 +89,17 @@
       }
     }
   },
+  "ACCOUNT": {
+    "SHARED": {
+      "USER_ROLE": {
+        "TEXT_ADMIN": "Администратор",
+        "TEXT_TECH_SUPPORT": "Тех. сотрудник",
+        "TEXT_CONTROLLER": "Руководитель",
+        "TEXT_LECTURER": "Преподаватель",
+        "TEXT_STUDENT": "Обучающийся"
+      }
+    }
+  },
   "SHARED": {
     "APP_HEADER": {
       "TEXT_APP": "/ heiecab"

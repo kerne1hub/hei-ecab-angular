@@ -1,0 +1,12 @@
+@import 'vars';
+
+:host ::ng-deep .personal {display: flex;
+  &-details {width: 40%; min-width: 400px; padding-right: 40px; box-sizing: border-box;
+    .personal-header {position: relative; margin-bottom: 2.71rem;
+      .personal-name {font-size: $title; font-weight: 700; margin-bottom: 0.57rem;}
+    }
+  }
+  &-image {min-height: 100vh; flex: 1; overflow: hidden;
+    background-color: $paper-95;
+  }
+}

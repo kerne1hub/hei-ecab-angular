@@ -1,0 +1,9 @@
+<img
+  src="{{ (source2x) ? source2x : source }}"
+  srcset="{{ source }} 1x,
+          {{ (source2x) ? source2x : source }} 2x"
+  imageLoader
+  [defaultSource]="defaultSource"
+  hidden
+  class="thumbnail"
+  alt="">

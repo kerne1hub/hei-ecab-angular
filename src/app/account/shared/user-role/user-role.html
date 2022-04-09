@@ -1,0 +1,11 @@
+<div
+  [ngClass]="{
+    'admin': role === statusEnum.ADMIN,
+    'support': role === statusEnum.TECH_SUPPORT,
+    'controller': role === statusEnum.CONTROLLER,
+    'lecturer': role === statusEnum.LECTURER,
+    'student': role === statusEnum.STUDENT
+  }"
+  class="user-role">
+  {{ roleTranslationKey | translate }}
+</div>
