@@ -92,7 +92,8 @@
   "ACCOUNT": {
     "SCHEDULE": {
       "FILTERS": {
-        "TEXT_SEARCH": "Группа"
+        "TEXT_SEARCH": "Группа",
+        "TEXT_DATE_PLACEHOLDER": "Дата"
       }
     },
     "SHARED": {

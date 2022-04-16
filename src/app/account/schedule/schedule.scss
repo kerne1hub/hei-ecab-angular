@@ -12,11 +12,8 @@
     &-actions {
       .button { width: 100%;}
     }
-    .filter-search {max-width: 287px; margin-right: 8px;
+    .filter-search, .filter-date {max-width: 278px; margin-right: 8px;
       .form-group {margin-bottom: 0;}
-    }
-    .filter-options {display: flex; align-items: center; margin-bottom: 16px;
-      .toggle-button {margin-right: 8px;}
     }
   }
 }

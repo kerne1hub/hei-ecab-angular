@@ -10,6 +10,10 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppState } from '@shared/store';
 import { NgxTippyModule } from 'ngx-tippy-wrapper';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
+import { configuration } from '@configurations';
+import { CustomDateAdapter } from '@shared/date-adapter';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,7 @@ import { NgxTippyModule } from 'ngx-tippy-wrapper';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     TranslateModule.forRoot({
       loader: {
@@ -35,7 +40,10 @@ import { NgxTippyModule } from 'ngx-tippy-wrapper';
     }),
     NgxTippyModule
   ],
-  providers: [],
+  providers: [
+    { provide: DateAdapter, useClass: CustomDateAdapter },
+    { provide: MAT_DATE_FORMATS, useValue: configuration.datepicker.dateFormats }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

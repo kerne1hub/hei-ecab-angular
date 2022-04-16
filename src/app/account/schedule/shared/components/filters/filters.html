@@ -4,7 +4,6 @@
   (ngrxFormsAction)="formActionTriggered($event)"
   role="form"
   class="page-filters">
-  <div class="filter-options">
     <div class="filter filter-search">
       <filter-search
         [controlState]="filterFormState.controls.search"
@@ -13,7 +12,11 @@
       </filter-search>
     </div>
     <div class="filter filter-date">
-
-    </div>
+      <form-datepicker
+        [controlState]="filterFormState.controls.date"
+        (controlStateActionTriggered)="formActionTriggered($event)"
+        xPosition="start"
+        placeholder="{{ 'ACCOUNT.SCHEDULE.FILTERS.TEXT_DATE_PLACEHOLDER' | translate }}">
+      </form-datepicker>
   </div>
 </form>

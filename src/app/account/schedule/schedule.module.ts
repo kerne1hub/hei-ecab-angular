@@ -13,6 +13,7 @@ import { AccountScheduleFiltersComponent } from './shared/components/filters/fil
 import { FilterSearchModule } from '@shared/filter-search';
 import { ReactiveComponentModule } from '@ngrx/component';
 import { NgrxFormsModule } from 'ngrx-forms';
+import { FormDatepickerModule } from '@shared/form-datepicker';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NgrxFormsModule } from 'ngrx-forms';
     AccountSchedulePageRoutingModule,
     FilterSearchModule,
     ReactiveComponentModule,
-    NgrxFormsModule
+    NgrxFormsModule,
+    FormDatepickerModule
   ]
 })
 export class AccountSchedulePageModule { }
