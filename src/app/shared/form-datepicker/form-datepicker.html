@@ -1,0 +1,81 @@
+<ng-container *ngrxLet="isOpened$; let isOpened">
+  <div
+    *ngrxLet="positionY$; let positionY"
+    [ngClass]="{
+      opened: isOpened,
+      'opened-below': isOpened && positionY === 'below',
+      'opened-above': isOpened && positionY === 'above'
+    }"
+    class="form-group form-group-datepicker">
+    <label
+      *ngIf="label"
+      [for]="controlState.id"
+      [ngClass]="{ required: isRequired }"
+      class="form-group-label">
+      {{ label }}
+    </label>
+    <ng-container *ngIf="timePickerEnabled; else datePicker">
+      <mat-form-field (click)="picker.open()">
+        <mat-label>{{ placeholder }}</mat-label>
+        <input
+          [ngrxFormControlState]="controlState"
+          [ngxMatDatetimePicker]="picker"
+          [ngrxValueConverter]="dateValueConverter"
+          [matDatepickerFilter]="dateFilter"
+          [disabled]="isDisabled"
+          [attr.data-testid]="dataTestID"
+          [ngClass]="{
+            'form-control-error': controlState.isSubmitted && controlState.isInvalid
+          }"
+          (ngrxFormsAction)="controlStateActionTriggered.emit($event)"
+          (positionYChanged)="positionYChanged($event)"
+          class="form-control"
+          readonly
+          matInput
+          datepickerPositionY />
+        <span class="icon icon-calendar"></span>
+        <ngx-mat-datetime-picker
+          #picker
+          [showSpinners]="false"
+          [enableMeridian]="true"
+          (closed)="datePickerClosed()"
+          (opened)="datePickerOpened()"
+          [xPosition]="xPosition">
+        </ngx-mat-datetime-picker>
+      </mat-form-field>
+    </ng-container>
+    <ng-template #datePicker>
+      <mat-form-field (click)="picker.open()">
+        <mat-label>{{ placeholder }}</mat-label>
+        <input
+          [ngrxFormControlState]="controlState"
+          [ngrxValueConverter]="dateValueConverter"
+          [matDatepicker]="picker"
+          [matDatepickerFilter]="dateFilter"
+          [disabled]="isDisabled"
+          [attr.data-testid]="dataTestID"
+          [ngClass]="{
+            'form-control-error': controlState.isSubmitted && controlState.isInvalid
+          }"
+          (ngrxFormsAction)="controlStateActionTriggered.emit($event)"
+          (positionYChanged)="positionYChanged($event)"
+          class="form-control"
+          readonly
+          matInput
+          datepickerPositionY />
+        <span class="icon icon-calendar"></span>
+        <mat-datepicker
+          #picker
+          (closed)="datePickerClosed()"
+          (opened)="datePickerOpened()"
+          [xPosition]="xPosition">
+        </mat-datepicker>
+      </mat-form-field>
+    </ng-template>
+    <validation-errors
+      *ngIf="controlState.isSubmitted && controlState.isInvalid"
+      [controlErrors]="controlState.errors"
+      [messages]="validationMessages">
+    </validation-errors>
+  </div>
+</ng-container>

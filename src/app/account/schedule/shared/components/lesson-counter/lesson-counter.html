@@ -1,0 +1,23 @@
+<div class="lessoncounter">
+  <div class="lessoncounter-item">
+    <span class="lessoncounter-icon lessoncounter-icon-lecture">
+      <span *ngIf="showCount">7</span>
+      <span *ngIf="!showCount">Л</span>
+    </span>
+    <span *ngIf="showLabel" class="lessoncounter-type">Лекции</span>
+  </div>
+  <div class="lessoncounter-item">
+    <span class="lessoncounter-icon lessoncounter-icon-practice">
+      <span *ngIf="showCount">3</span>
+      <span *ngIf="!showCount">П</span>
+    </span>
+    <span *ngIf="showLabel" class="lessoncounter-type">Практические занятия</span>
+  </div>
+  <div class="lessoncounter-item">
+    <span class="lessoncounter-icon lessoncounter-icon-lab">
+      <span *ngIf="showCount">1</span>
+      <span *ngIf="!showCount">ЛР</span>
+    </span>
+    <span *ngIf="showLabel" class="lessoncounter-type">Лабораторные занятия</span>
+  </div>
+</div>

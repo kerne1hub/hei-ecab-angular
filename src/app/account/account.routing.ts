@@ -19,6 +19,10 @@ const routes: Routes = [
       {
         path: 'personal',
         loadChildren: () => import('./personal/personal.module').then((module) => module.AccountPersonalPageModule)
+      },
+      {
+        path: 'schedule',
+        loadChildren: () => import('./schedule/schedule.module').then((module) => module.AccountSchedulePageModule)
       }
     ]
   }

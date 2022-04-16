@@ -1,0 +1,17 @@
+<div class="form-group">
+  <span class="form-control-icon-left icon icon-search"></span>
+  <input
+    [ngrxFormControlState]="controlState"
+    [placeholder]="placeholder"
+    (ngrxFormsAction)="controlStateActionTriggered.next($event)"
+    type="text"
+    data-testid="search-input"
+    role="textbox"
+    class="form-control form-control-iconic-left" />
+  <a
+    *ngIf="controlState.value"
+    (click)="clear()"
+    class="form-control-action-right">
+    <span class="icon icon-mask icon-error"></span>
+  </a>
+</div>

@@ -90,6 +90,11 @@
     }
   },
   "ACCOUNT": {
+    "SCHEDULE": {
+      "FILTERS": {
+        "TEXT_SEARCH": "Группа"
+      }
+    },
     "SHARED": {
       "USER_ROLE": {
         "TEXT_ADMIN": "Администратор",

@@ -1,0 +1,50 @@
+<div
+  [ngClass]="{ 'collapsed': isCollapsed }"
+  class="node">
+  <div
+    [ngClass]="{ 'node-outline-bottom': !isCollapsed }"
+    class="node-title">
+    <a (click)="toggle()" class="node-toggle">
+      <button
+        [ngClass]="{ 'toggle-button-opened': !isCollapsed }"
+        class="toggle-button">
+        <span class="icon icon-toggle"></span>
+      </button>
+      <span class="node-date">Пн, 1 января</span>
+      <schedule-lesson-counter [showLabel]="false"></schedule-lesson-counter>
+    </a>
+  </div>
+  <div class="node-container">
+    <div class="node-content">
+      <div class="row row-nogap">
+        <div class="col col-25">
+          <div class="node-info">
+            <div class="node-time">8:00 - 9:30</div>
+            <div class="node-index">1-я пара</div>
+            <div class="node-counter">
+              <schedule-lesson-counter [showLabel]="false"></schedule-lesson-counter>
+            </div>
+          </div>
+        </div>
+        <div class="node-item col col-75">
+          <schedule-lesson></schedule-lesson>
+        </div>
+      </div>
+
+      <div class="row row-nogap">
+        <div class="col col-25">
+          <div class="node-info">
+            <div class="node-time">8:00 - 9:30</div>
+            <div class="node-index">1-я пара</div>
+            <div class="node-counter">
+              <schedule-lesson-counter [showLabel]="false"></schedule-lesson-counter>
+            </div>
+          </div>
+        </div>
+        <div class="node-item col col-75">
+          <schedule-lesson></schedule-lesson>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

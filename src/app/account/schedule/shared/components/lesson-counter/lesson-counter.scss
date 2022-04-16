@@ -1,0 +1,16 @@
+@import 'vars';
+
+:host ::ng-deep .lessoncounter {margin-bottom: 27px; display: flex;
+  &-icon {border-radius: 4px; min-width: 24px; text-align: center; padding: 0 3px; line-height: 24px; color: #fff;
+    font-size: $small; margin-right: 8px; display: inline-block; box-sizing: border-box;
+    &-practice {background-color: $brand-yellow;}
+    &-control {background-color: $brand-orange;}
+    &-lab {background-color: $brand-blue;}
+    &-consultation {background-color: $brand-purple;}
+    &-exam {background-color: $brand-red;}
+    &-lecture {background-color: $brand-green;}
+    &-reserve1 {background-color: $brand-orange-light;}
+    &-reserve2 {background-color: $brand-green;}
+    &-reserve3 {background-color: $ink-80;}
+  }
+}

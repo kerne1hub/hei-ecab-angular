@@ -1,0 +1,32 @@
+@import 'vars';
+
+:host ::ng-deep .node {min-height: 28px;
+  &-title {display: flex; align-items: center; font-size: 1rem; cursor: pointer; color: $ink-50;
+    padding: 0; width: 100%;}
+  &-toggle, &-counter {color: inherit; flex: 1 1 auto;
+    .lessoncounter {display: inline-flex; margin-bottom: 8px;
+      &-item {
+        .lessoncounter-icon {min-width: 20px; line-height: 20px;}
+        &:not(:first-child) {margin-left: 0;}
+      }
+    }
+  }
+  &-date {margin-right: 10px;}
+  &-info {padding: 20px 0;}
+  &-time {margin-bottom: 5px;}
+  &-index {font-size: $small; color: $ink-50; margin-bottom: 9px;}
+  &-outline-bottom {border-bottom: 2px solid $ink-80;}
+  &-item {padding: 10px 0;}
+  &-container {overflow: hidden;}
+  &-content {margin-top: 0; transition: margin-top 0.6s;}
+  .toggle-button {background: none;
+    .icon {width: 10px; height: 10px; transform: scale(1.6) rotate(180deg); background: $ink-65; vertical-align: unset;
+      transition: all 0.3s;}
+    &-opened {
+      .icon {transform: scale(1.6) rotate(0deg);}
+    }
+  }
+  &.collapsed {
+    .node-content {margin-top: -100%;}
+  }
+}

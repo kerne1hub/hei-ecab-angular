@@ -1,0 +1,19 @@
+<form
+  *ngrxLet="filterFormState$; let filterFormState"
+  [ngrxFormState]="filterFormState"
+  (ngrxFormsAction)="formActionTriggered($event)"
+  role="form"
+  class="page-filters">
+  <div class="filter-options">
+    <div class="filter filter-search">
+      <filter-search
+        [controlState]="filterFormState.controls.search"
+        (controlStateActionTriggered)="formActionTriggered($event)"
+        placeholder="{{ 'ACCOUNT.SCHEDULE.FILTERS.TEXT_SEARCH' | translate }}">
+      </filter-search>
+    </div>
+    <div class="filter filter-date">
+
+    </div>
+  </div>
+</form>

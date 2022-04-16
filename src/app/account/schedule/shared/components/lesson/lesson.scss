@@ -1,0 +1,18 @@
+@import 'vars';
+
+:host ::ng-deep .lesson {padding: 8px 16px; border: 1px solid $ink-80; border-radius: 3px; margin-bottom: 8px;
+  background: $paper-100;
+  &-header {display: flex;}
+  &-title {flex: 1 1 auto; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+  &-actions {margin: 0; white-space: nowrap;}
+  .lessoncounter {display: inline-flex; margin-bottom: 8px;
+    &-item {
+      .lessoncounter-icon {min-width: 20px; line-height: 20px;}
+      &:not(:first-child) {margin-left: 1rem;}
+    }
+  }
+  .metadata {margin-bottom: 8px; font-size: $small;
+    &-place, &-target, &-lecturer {color: $ink-65;}
+    &-item:not(:last-child) {margin-bottom: 4px;}
+  }
+}

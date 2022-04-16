@@ -1,0 +1,6 @@
+@import 'vars';
+
+:host .training-data {margin-bottom: 2.6rem;
+  &-header {display: flex; padding-bottom: 0.6rem; border-bottom: 1px solid $ink-80; margin-bottom: 1.4rem;}
+  &-label {font-size: $small; text-transform: uppercase; color: $ink-50; letter-spacing: 1px;}
+}

@@ -1,0 +1,22 @@
+@import 'vars';
+
+:host ::ng-deep .schedule {
+  &-header {padding-bottom: 2.71rem;}
+  &-title {font-size: $title; font-weight: 700; line-height: 36px; margin: 0;}
+  .lessoncounter {
+     &-item:not(:first-child) {margin-left: 2rem;}
+  }
+  &-node {
+  }
+  .page-filters {display: grid; grid-template-columns: 24% 24% 24% 24%; grid-column-gap: 12px; margin-bottom: 28px;
+    &-actions {
+      .button { width: 100%;}
+    }
+    .filter-search {max-width: 287px; margin-right: 8px;
+      .form-group {margin-bottom: 0;}
+    }
+    .filter-options {display: flex; align-items: center; margin-bottom: 16px;
+      .toggle-button {margin-right: 8px;}
+    }
+  }
+}
