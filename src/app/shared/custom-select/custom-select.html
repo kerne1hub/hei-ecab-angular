@@ -1,0 +1,74 @@
+<label
+  *ngIf="label"
+  [for]="controlState.id"
+  [ngClass]="{ required: isRequired }"
+  class="form-group-label">
+  {{ label }}
+</label>
+<div
+  *ngIf="!isDisabled; else disabledDropdown"
+  [ngClass]="{
+    'custom-select-error': controlState.isSubmitted && controlState.isInvalid
+  }"
+  class="dropdown custom-select"
+  dropdown
+  data-testid="select">
+  <a
+    [ngClass]="{
+      'dropdown-trigger-placeholder': !selectedOption,
+      'dropdown-trigger-canrotate': canRotateTriggerIcon
+    }"
+    class="dropdown-trigger">
+    {{ selectedValueTitle }}
+    <a
+      *ngIf="hasReset && selectedOption"
+      (click)="resetTriggered()"
+      class="dropdown-reset">
+      <span class="icon icon-mask icon-small icon-error"></span>
+    </a>
+    <span class="dropdown-trigger-icon icon icon-mask icon-{{ triggerIcon }}"></span>
+  </a>
+  <div class="dropdown-content dropdown-content-scrollable">
+    <div
+      (scrolled)="scrolled()"
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      [scrollWindow]="false"
+      [infiniteScrollDisabled]="isLoading"
+      class="dropdown-scroll"
+      infiniteScroll>
+      <div class="dropdown-items">
+        <a
+          *ngFor="let option of options; trackByProperty: 'id'"
+          (click)="optionClicked(option)"
+          [title]="option.title || ''"
+          data-testid="dropdown-item"
+          class="dropdown-item">
+          {{ option.title }}
+        </a>
+        <div
+          *ngIf="isLoading"
+          class="dropdown-item disabled">
+          <loading-spinner
+            [type]="spinnerTypeEnum.DEFAULT"
+            [diameter]="spinnerDiameterEnum.SMALL"></loading-spinner>
+        </div>
+        <div
+          *ngIf="isNotFound"
+          class="dropdown-item not-found disabled">
+          {{ 'SHARED.SELECT.TEXT_NO_ITEMS' | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #disabledDropdown>
+  <div class="dropdown custom-select disabled">
+    <a class="dropdown-trigger"> {{ selectedValueTitle }} </a>
+  </div>
+</ng-template>
+<validation-errors
+  *ngIf="controlState.isSubmitted && controlState.isInvalid"
+  [controlErrors]="controlState.errors"
+  [messages]="validationMessages">
+</validation-errors>

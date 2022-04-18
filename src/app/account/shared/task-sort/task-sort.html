@@ -1,0 +1,10 @@
+<div class="form-group form-group-labeled">
+  <custom-select
+    [controlState]="controlState"
+    [options]="options"
+    (controlStateActionTriggered)="controlStateActionTriggered.emit($event)"
+    placeholder="{{ 'ACCOUNT.SHARED.TASK_SORT.TEXT_SELECT' | translate }}"
+    data-testid="task-sort-select"
+    class="task-sort-select">
+  </custom-select>
+</div>

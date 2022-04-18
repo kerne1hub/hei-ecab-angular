@@ -1,0 +1,20 @@
+<form
+  *ngrxLet="filterFormState$; let filterFormState"
+  [ngrxFormState]="filterFormState"
+  (ngrxFormsAction)="formActionTriggered($event)"
+  role="form"
+  class="page-filters">
+  <div class="filter filter-search">
+    <filter-search
+      [controlState]="filterFormState.controls.search"
+      (controlStateActionTriggered)="formActionTriggered($event)"
+      placeholder="{{ 'ACCOUNT.TASKS.FILTERS.TEXT_SEARCH' | translate }}">
+    </filter-search>
+  </div>
+  <div class="filter filter-sort">
+    <account-task-sort
+      [controlState]="filterFormState.controls.sortBy"
+      (controlStateActionTriggered)="formActionTriggered($event)">
+    </account-task-sort>
+  </div>
+</form>

@@ -46,4 +46,10 @@ export const initConfiguration = (configuration: any): any => merge({
       default: 7
     }
   },
+  ngxProgress: {
+    spinner: false,
+    color: '#2C71D3',
+    min: 0,
+    max: 100
+  }
 }, configuration);

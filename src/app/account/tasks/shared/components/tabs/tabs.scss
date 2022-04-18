@@ -1,0 +1,11 @@
+@import 'vars';
+
+:host ::ng-deep .tabs {border-bottom: 1px solid $ink-80;
+  &-menu {display: flex; list-style: none; padding: 0; margin: 0;}
+  .tab {display: block; color: $ink; padding: 1rem 0.75rem;
+    &-title {display: inline;}
+    &.active {font-weight: 600; box-shadow: inset 0 -2px 0 0 $primary;}
+    &:hover:not(.active) {box-shadow: inset 0 -2px 0 0 $ink-80;}
+  }
+  .badge {margin-left: 4px;}
+}

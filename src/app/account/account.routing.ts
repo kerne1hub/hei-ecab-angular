@@ -23,6 +23,10 @@ const routes: Routes = [
       {
         path: 'schedule',
         loadChildren: () => import('./schedule/schedule.module').then((module) => module.AccountSchedulePageModule)
+      },
+      {
+        path: 'tasks',
+        loadChildren: () => import('./tasks/tasks.module').then((module) => module.AccountTasksPageModule)
       }
     ]
   }

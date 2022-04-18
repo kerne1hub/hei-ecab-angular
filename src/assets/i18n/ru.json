@@ -96,6 +96,11 @@
         "TEXT_DATE_PLACEHOLDER": "Дата"
       }
     },
+    "TASKS": {
+      "FILTERS": {
+        "TEXT_SEARCH": "Дисциплина"
+      }
+    },
     "SHARED": {
       "USER_ROLE": {
         "TEXT_ADMIN": "Администратор",
@@ -103,6 +108,11 @@
         "TEXT_CONTROLLER": "Руководитель",
         "TEXT_LECTURER": "Преподаватель",
         "TEXT_STUDENT": "Обучающийся"
+      },
+      "TASK_SORT": {
+        "TEXT_SELECT": "Сортировать",
+        "TEXT_BY_DATE": "По дате",
+        "TEXT_BY_STATUS": "По статусу"
       }
     }
   },

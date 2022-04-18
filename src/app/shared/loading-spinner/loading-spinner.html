@@ -1,0 +1,14 @@
+<ng-container [ngSwitch]="type">
+  <div
+    *ngSwitchCase="spinnerTypeEnum.AUTH"
+    class="loading-spinner loading-spinner-auth"></div>
+  <mat-spinner
+    *ngSwitchCase="spinnerTypeEnum.MATERIAL"
+    [diameter]="diameter"
+    class="loading-spinner loading-spinner-material">
+  </mat-spinner>
+  <div
+    *ngSwitchDefault
+    [style.--size]="size"
+    class="loading-spinner loading-spinner-default"></div>
+</ng-container>
