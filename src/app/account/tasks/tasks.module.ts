@@ -12,13 +12,19 @@ import { FilterSearchModule } from '@shared/filter-search';
 import { ReactiveComponentModule } from '@ngrx/component';
 import { NgrxFormsModule } from 'ngrx-forms';
 import { AccountTaskSortModule } from '@app/account/shared/task-sort';
+import { AccountTasksTreeComponent } from './shared/components/tree/tree.component';
+import { AccountTasksTreeNodeComponent } from './shared/components/tree-node/tree-node.component';
+import { AccountTasksTreeItemComponent } from './shared/components/tree-item/tree-item.component';
 
 @NgModule({
   declarations: [
     AccountTasksPageComponent,
     AccountTasksHeaderComponent,
     AccountTasksTabsComponent,
-    AccountTasksFiltersComponent
+    AccountTasksFiltersComponent,
+    AccountTasksTreeComponent,
+    AccountTasksTreeNodeComponent,
+    AccountTasksTreeItemComponent
   ],
   imports: [
     CommonModule,

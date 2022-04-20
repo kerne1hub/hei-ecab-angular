@@ -1,13 +1,7 @@
-<div
-  [ngClass]="{ 'collapsed': isCollapsed }"
-  class="node">
-  <div
-    [ngClass]="{ 'node-outline-bottom': !isCollapsed }"
-    class="node-title">
+<div [ngClass]="{ 'collapsed': isCollapsed }" class="node">
+  <div [ngClass]="{ 'node-outline-bottom': !isCollapsed }" class="node-title">
     <a (click)="toggle()" class="node-toggle">
-      <button
-        [ngClass]="{ 'toggle-button-opened': !isCollapsed }"
-        class="toggle-button">
+      <button [ngClass]="{ 'toggle-button-opened': !isCollapsed }" class="toggle-button">
         <span class="icon icon-toggle"></span>
       </button>
       <span class="node-date">Пн, 1 января</span>

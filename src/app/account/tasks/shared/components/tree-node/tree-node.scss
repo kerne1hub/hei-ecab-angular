@@ -1,0 +1,20 @@
+@import 'vars';
+
+:host ::ng-deep .tree-node {min-height: 36px; border: 1px solid $ink-80; border-radius: 4px;
+  &-header {cursor: pointer; padding: 10px 15px;}
+  &-title {font-size: $middle; color: $ink;}
+  &-toggle {color: inherit;}
+  &-progress {color: $ink-50;}
+  &-container {overflow: hidden;}
+  &-content {margin-top: 0; transition: margin-top 0.4s;}
+  .toggle-button {background: none;
+    .icon {width: 10px; height: 10px; transform: scale(1.6) rotate(180deg); background: $ink-65; vertical-align: unset;
+      transition: all 0.3s;}
+    &-opened {
+      .icon {transform: scale(1.6) rotate(0deg);}
+    }
+  }
+  &.collapsed {
+    .tree-node-content {margin-top: -100%;}
+  }
+}

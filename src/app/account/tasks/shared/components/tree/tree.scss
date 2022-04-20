@@ -1,0 +1,5 @@
+:host ::ng-deep .tree {
+  tasks-tree-node:not(:last-child) {
+    .tree-node {margin-bottom: 4px;}
+  }
+}

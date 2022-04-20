@@ -1,0 +1,17 @@
+<div [ngClass]="{ 'collapsed': isCollapsed }" class="tree-node">
+  <div class="tree-node-header">
+    <a (click)="toggle()" class="tree-node-toggle">
+      <button [ngClass]="{ 'toggle-button-opened': !isCollapsed }" class="toggle-button">
+        <span class="icon icon-toggle"></span>
+      </button>
+      <span class="tree-node-title">Автоматизированные системы специального назначения</span>
+      <span class="tree-node-progress"> &nbsp; 1 из 4 выполнено</span>
+    </a>
+  </div>
+  <div class="tree-node-container">
+    <div class="tree-node-content">
+      <tasks-tree-item></tasks-tree-item>
+      <tasks-tree-item></tasks-tree-item>
+    </div>
+  </div>
+</div>

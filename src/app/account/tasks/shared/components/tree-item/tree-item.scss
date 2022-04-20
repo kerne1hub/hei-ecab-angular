@@ -1,0 +1,16 @@
+@import 'vars';
+
+:host .tree-item {background: $paper-100; padding: 10px 16px; border-bottom: 1px solid $ink-80;
+  &-container {display: flex; justify-content: space-between;}
+  &-title {font-weight: 600;}
+  &-title, &-value {
+    &:hover {text-decoration: underline;}
+  }
+  &-info, &-updated {margin-top: 4px; color: $ink-50;}
+  &-title, &-link, &-value {color: $ink;}
+  &-controls {display: flex; justify-content: flex-end; align-items: center;}
+  &-control {display: flex; align-items: center;
+    .icon-user {width: 23px; height: 23px; transform: scale(0.7);}
+    .icon-chat {width: 24px; height: 24px; transform: scale(0.67);}
+  }
+}
