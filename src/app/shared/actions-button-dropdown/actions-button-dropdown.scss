@@ -9,7 +9,7 @@
     &-loading .icon {background-color: transparent;}
   }
   .dropdown-content {min-width: 140px; width: auto;}
-  .dropdown-item {padding: 5px; pointer-events: auto;
+  .dropdown-item {padding: 5px;
     &-title, &-reason {margin: 0 4px;}
     &-reason {display: block; font-size: $small;}
   }

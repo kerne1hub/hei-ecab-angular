@@ -1,0 +1,21 @@
+@import 'vars';
+
+:host ::ng-deep .tasks-details {
+  &-header {padding-bottom: 2.71rem;}
+  &-title {font-size: $title; font-weight: 700; line-height: 36px; margin: 0;}
+  &-meta {display: flex; line-height: 34px; padding: 10px 0; border-bottom: 1px solid $ink-80;
+    border-top: 1px solid $ink-80;
+    account-task-status {margin-right: 8px;}
+    .avatar {vertical-align: middle; margin: 0 4px 0 2px; border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 50%;}
+  }
+  &-author {font-weight: 700; color: $ink;}
+  &-action {margin-left: auto;}
+  &-description {padding: 16px 0;}
+  &-content {padding: 16px 0; border-bottom: 1px solid $ink-80;
+    .tasks-details-title {display: flex; justify-content: space-between; align-items: flex-start;}
+    p {margin-top: 0;}
+  }
+  &-name {margin-bottom: 1rem;}
+  &-edit {line-height: 16px; padding: 8px;}
+  &-list {list-style-type: none; margin: 0; padding-inline-start: 1rem; line-height: 1.6em;}
+}

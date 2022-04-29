@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: AccountTasksPageComponent
+  },
+  {
+    path: 'details',
+    loadChildren: () => import('./details/details.module').then((module) => module.AccountTasksDetailsPageModule)
   }
 ];
 

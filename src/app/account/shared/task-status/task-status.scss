@@ -1,0 +1,5 @@
+@import 'vars';
+
+:host .task-status {display: inline-block; line-height: 1.75rem; color: $paper-100; padding: 0 8px;
+  background: $brand-green; border-radius: 4px;
+}

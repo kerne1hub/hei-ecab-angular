@@ -39,6 +39,8 @@ body, html {background: #f4f4f4; color: #000; font-size: 14px; font-family: $fon
   &-error {background-image: url(/assets/images/error.svg); background: $ink-65; mask-image: url(/assets/images/error.svg);}
   &-calendar {background-image: url(/assets/images/calendar.svg);}
   &-chat {background-image: url(/assets/images/chat.svg); background: $ink-65; mask-image: url(/assets/images/chat.svg);}
+  &-edit {background-image: url(/assets/images/edit.svg); background: $ink-65; mask-image: url(/assets/images/edit.svg);}
+  &-done {background-image: url(/assets/images/done.svg); background: $ink-65; mask-image: url(/assets/images/done.svg);}
 }
 
 /* links */
@@ -410,4 +412,18 @@ input, textarea, select {filter: none;}
 }
 .cdk-program-focused .mat-calendar-body-active>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected) {
   background-color: #fff;
+}
+
+/* widget */
+.widget {background: $paper-100; box-sizing: border-box; border: 1px solid $ink-80; border-radius: 4px;
+  &-header {display: flex; align-items: center; font-weight: 600; padding: 16px;}
+  &-status {transform: scale(1.375); margin-right: 8px;}
+  &-title {margin-left: 8px;}
+  &-footer {border-top: 1px solid $ink-80; padding: 8px 16px; background: $paper-90;}
+  &-pipes {display: flex; align-items: center; margin-left: auto;
+    .icon {transform: scale(1.125);}
+  }
+  &-info {font-size: $small; margin-left: 32px;}
+  .icon-done {background: $brand-green;}
+  .icon {margin-right: 4px;}
 }
