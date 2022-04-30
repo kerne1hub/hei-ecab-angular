@@ -18,4 +18,21 @@
   &-name {margin-bottom: 1rem;}
   &-edit {line-height: 16px; padding: 8px;}
   &-list {list-style-type: none; margin: 0; padding-inline-start: 1rem; line-height: 1.6em;}
+  &-attachments {margin-top: 1rem;
+    .widget-content {flex-direction: column; align-items: flex-start;}
+  }
+  &-document {display: flex; width: 100%;}
+  &-filesize {color: $ink-65; margin-left: 1rem;}
+  &-fileactions {margin-left: auto;}
+  &-action:not(:last-child) {margin-right: 0.5rem;}
+  &-doctitle {margin-top: 0.5rem;}
+  &-authored {font-size: $small; color: $ink-65; margin-top: 0.5rem;}
+  &-timepoint {margin: 1rem 0; padding: 4px 20px;}
+  .widget {
+    &-header {
+      .button {display: flex; padding: 8px;}
+    }
+    .icon-plus {width: 12px; height: 12px; transform: scale(1.5); margin: 0;}
+    .action-delete {color: $destructive;}
+  }
 }

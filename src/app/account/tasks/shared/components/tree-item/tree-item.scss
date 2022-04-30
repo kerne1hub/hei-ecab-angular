@@ -1,7 +1,7 @@
 @import 'vars';
 
 :host .tree-item {background: $paper-100; padding: 10px 16px; border-bottom: 1px solid $ink-80;
-  &-container {display: flex; justify-content: space-between;}
+  &-container {display: flex; justify-content: space-between; align-items: center;}
   &-title {font-weight: 600;}
   &-title, &-value {
     &:hover {text-decoration: underline;}

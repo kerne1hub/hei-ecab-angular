@@ -9,13 +9,17 @@ import { AccountTasksDetailsHeaderComponent } from './shared/components/header/h
 import { AccountTasksDetailsMetaComponent } from './shared/components/meta/meta.component';
 import { AccountTaskStatusModule } from '@app/account/shared/task-status';
 import { AccountTasksDetailsContentComponent } from './shared/components/content/content.component';
+import { AccountTasksDetailsTimelineComponent } from './shared/components/timeline/timeline.component';
+import { AccountTasksDetailsTimelineEntryComponent } from './shared/components/timeline-entry/timeline-entry.component';
 
 @NgModule({
   declarations: [
     AccountTasksDetailsPageComponent,
     AccountTasksDetailsHeaderComponent,
     AccountTasksDetailsMetaComponent,
-    AccountTasksDetailsContentComponent
+    AccountTasksDetailsContentComponent,
+    AccountTasksDetailsTimelineComponent,
+    AccountTasksDetailsTimelineEntryComponent
   ],
   imports: [
     CommonModule,

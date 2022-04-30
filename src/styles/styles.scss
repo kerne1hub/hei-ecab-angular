@@ -41,6 +41,9 @@ body, html {background: #f4f4f4; color: #000; font-size: 14px; font-family: $fon
   &-chat {background-image: url(/assets/images/chat.svg); background: $ink-65; mask-image: url(/assets/images/chat.svg);}
   &-edit {background-image: url(/assets/images/edit.svg); background: $ink-65; mask-image: url(/assets/images/edit.svg);}
   &-done {background-image: url(/assets/images/done.svg); background: $ink-65; mask-image: url(/assets/images/done.svg);}
+  &-document {background-image: url(/assets/images/document.svg); background: $ink-65; mask-image: url(/assets/images/document.svg);}
+  &-plus {background-image: url(/assets/images/plus.svg); background: $ink-65; mask-image: url(/assets/images/plus.svg);}
+  &-download {background-image: url(/assets/images/download.svg); background: $ink-65; mask-image: url(/assets/images/download.svg);}
 }
 
 /* links */
@@ -416,14 +419,19 @@ input, textarea, select {filter: none;}
 
 /* widget */
 .widget {background: $paper-100; box-sizing: border-box; border: 1px solid $ink-80; border-radius: 4px;
-  &-header {display: flex; align-items: center; font-weight: 600; padding: 16px;}
+  &-content {display: flex; align-items: center; padding: 16px;}
   &-status {transform: scale(1.375); margin-right: 8px;}
-  &-title {margin-left: 8px;}
-  &-footer {border-top: 1px solid $ink-80; padding: 8px 16px; background: $paper-90;}
+  &-title {font-weight: 600; margin-left: 8px;}
+  &-header {display: flex; align-items: center; background: $paper-95; padding: 6px 16px;}
+  &-footer {display: flex; align-items: center; justify-content: space-between; border-top: 1px solid $ink-80;
+    padding: 8px 16px; background: $paper-90;
+    .button {padding: 0.25rem 0.5rem;}
+  }
   &-pipes {display: flex; align-items: center; margin-left: auto;
     .icon {transform: scale(1.125);}
   }
   &-info {font-size: $small; margin-left: 32px;}
   .icon-done {background: $brand-green;}
   .icon {margin-right: 4px;}
+  &-counter {margin: 0 1rem;}
 }
