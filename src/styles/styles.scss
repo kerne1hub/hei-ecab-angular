@@ -44,6 +44,9 @@ body, html {background: #f4f4f4; color: #000; font-size: 14px; font-family: $fon
   &-document {background-image: url(/assets/images/document.svg); background: $ink-65; mask-image: url(/assets/images/document.svg);}
   &-plus {background-image: url(/assets/images/plus.svg); background: $ink-65; mask-image: url(/assets/images/plus.svg);}
   &-download {background-image: url(/assets/images/download.svg); background: $ink-65; mask-image: url(/assets/images/download.svg);}
+  &-label {background-image: url(/assets/images/label.svg); background: $ink-65; mask-image: url(/assets/images/label.svg);}
+  &-clock {background-image: url(/assets/images/clock.svg); background: $ink-65; mask-image: url(/assets/images/clock.svg);}
+  &-user-outline {background-image: url(/assets/images/user-outline.svg); background: $ink-65; mask-image: url(/assets/images/user-outline.svg);}
 }
 
 /* links */

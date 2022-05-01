@@ -1,0 +1,26 @@
+<div class="form-group">
+  <span
+    *ngIf="label"
+    class="form-group-label"
+    [ngClass]="{ 'required': isRequired }">
+    {{ label }}
+  </span>
+  <div class="textarea-wrapper">
+    <textarea
+      [ngrxFormControlState]="controlState"
+      [placeholder]="placeholder"
+      [attr.data-testid]="dataTestID"
+      [attr.role]="fieldRole"
+      [ngClass]="{
+        'form-control-error': controlState.isSubmitted && controlState.isInvalid
+      }"
+      (ngrxFormsAction)="controlStateActionTriggered.emit($event)"
+      class="form-control">
+    </textarea>
+  </div>
+  <validation-errors
+    *ngIf="controlState.isSubmitted && controlState.isInvalid"
+    [controlErrors]="controlState.errors"
+    [messages]="validationMessages">
+  </validation-errors>
+</div>

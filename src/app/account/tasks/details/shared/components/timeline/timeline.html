@@ -1,3 +1,7 @@
-<div class="tasks-details-timeline">
-  <tasks-details-timeline-entry></tasks-details-timeline-entry>
+<div class="timeline">
+  <div class="timeline-entries">
+    <tasks-details-timeline-entry [data]="timelineAddLabel"></tasks-details-timeline-entry>
+    <tasks-details-timeline-entry [data]="timelineChangeMilestone"></tasks-details-timeline-entry>
+    <tasks-details-timeline-entry [data]="timelineReassign"></tasks-details-timeline-entry>
+  </div>
 </div>

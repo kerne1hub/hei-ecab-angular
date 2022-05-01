@@ -1,3 +1,29 @@
-<div class="tasks-details-timepoint">
-  <span class="icon icon-label"></span>
-</div>
+<ng-container *ngIf="data">
+  <div class="timeline-entry">
+    <div class="icon-wrapper">
+      <span class="icon icon-{{ data.icon }}"></span>
+    </div>
+    <div class="timeline-content">
+      <a class="timeline-author">
+        <span class="timeline-initiator">{{ data.initiator }} </span>
+        <span class="timeline-username">{{ data.initiatorUsername }} </span>
+      </a>
+      <span *ngIf="data.eventType === eventTypeEnum.ADD_LABEL" class="timeline-action">
+        добавил метку
+        <account-badge [value]="data.label" [color]="'#F0AD4E'"></account-badge>
+        <span class="timeline-timestamp"> {{ timestamp }}</span>
+      </span>
+      <span *ngIf="data.eventType === eventTypeEnum.CHANGE_MILESTONE" class="timeline-action">
+        изменил срок сдачи до {{ data.expireDate.toLocaleString() }}
+        <span class="timeline-timestamp"> {{ timestamp }}</span>
+      </span>
+      <span *ngIf="data.eventType === eventTypeEnum.REASSIGN" class="timeline-action">
+        назначил ответственным
+        <a class="timeline-assigned">{{ data.assignUsername }}</a>
+        вместо
+        <a class="timeline-unassigned">{{ data.unassignUsername }}</a>
+        <span class="timeline-timestamp"> {{ timestamp }}</span>
+      </span>
+    </div>
+  </div>
+</ng-container>

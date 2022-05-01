@@ -1,1 +1,14 @@
-:host .timeline {}
+@import 'vars';
+
+:host ::ng-deep .timeline {position: relative;
+  &-entries:before {content: ''; border-left: 2px solid $ink-80; position: absolute; top: 4px; bottom: 0; left: 36px;}
+  &-entry {position: relative; display: flex; align-items: center; color: $ink-50; margin: 1rem 0; padding: 4px 20px;
+    .icon-wrapper {width: 32px; height: 32px; border: 1px solid $ink-65; border-radius: 50%; text-align: center;
+      line-height: 32px; background: $paper-98; margin-right: 20px;
+    }
+  }
+  &-author {color: $ink-50;}
+  &-initiator {font-weight: 600; color: $ink;}
+  &-assigned {background: $destructive-bg; border-radius: 4px; padding: 0 2px;}
+  &-unassigned {background: $primary-90; border-radius: 4px; padding: 0 2px;}
+}

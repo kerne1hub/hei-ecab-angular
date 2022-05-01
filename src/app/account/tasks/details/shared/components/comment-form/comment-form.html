@@ -1,0 +1,12 @@
+<form
+  *ngrxLet="formState$; let formState"
+  [ngrxFormState]="formState"
+  (submit)="formSubmitted()"
+  (ngrxFormsAction)="formActionTriggered($event)"
+  role="form"
+  class="tasks-details-form">
+  <form-textarea
+    [controlState]="formState.controls.content"
+    (controlStateActionTriggered)="formActionTriggered($event)">
+  </form-textarea>
+</form>
