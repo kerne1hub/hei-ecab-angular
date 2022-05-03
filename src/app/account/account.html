@@ -1,10 +1,16 @@
 <div class="account">
   <account-header></account-header>
-  <div class="account-layout">
-    <account-sidebar></account-sidebar>
-    <section class="account-page">
-      <router-outlet></router-outlet>
-    </section>
-  </div>
+  <ng-container *ngIf="contentSidebarState$ | async as sidebarState">
+    <div
+      [ngClass]="{
+        'right-sidebar-expanded': sidebarState === 'expanded',
+        'right-sidebar-collapsed': sidebarState === 'collapsed'
+      }"
+      class="account-layout">
+      <account-sidebar></account-sidebar>
+      <section class="account-page">
+        <router-outlet></router-outlet>
+      </section>
+    </div>
+  </ng-container>
 </div>
-

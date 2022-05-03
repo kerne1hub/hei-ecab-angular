@@ -15,6 +15,7 @@ import { AccountTasksDetailsCommentFormComponent } from './shared/components/com
 import { FormTextareaModule } from '@shared/form-textarea';
 import { ReactiveComponentModule } from '@ngrx/component';
 import { NgrxFormsModule } from 'ngrx-forms';
+import { AccountTasksDetailsContentSidebarComponent } from './shared/components/content-sidebar/content-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NgrxFormsModule } from 'ngrx-forms';
     AccountTasksDetailsContentComponent,
     AccountTasksDetailsTimelineComponent,
     AccountTasksDetailsTimelineEntryComponent,
-    AccountTasksDetailsCommentFormComponent
+    AccountTasksDetailsCommentFormComponent,
+    AccountTasksDetailsContentSidebarComponent
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,5 @@
 <ng-container *ngIf="data">
-  <div class="timeline-entry">
+  <div [ngClass]="{ 'comment': isComment }" class="timeline-entry">
     <div class="icon-wrapper">
       <span class="icon icon-{{ data.icon }}"></span>
     </div>
@@ -24,6 +24,24 @@
         <a class="timeline-unassigned">{{ data.unassignUsername }}</a>
         <span class="timeline-timestamp"> {{ timestamp }}</span>
       </span>
+    </div>
+
+    <div *ngIf="isComment" class="comment-content">
+      <div class="comment-avatar">
+        <span class="icon icon-user"></span>
+      </div>
+      <div class="comment-box">
+        <div class="comment-header">
+          <span class="timeline-initiator">{{ data.initiator }} </span>
+          <span class="timeline-username">{{ data.initiatorUsername }}</span>
+           ·
+          <span class="timeline-timestamp">{{ timestamp }}</span>
+          <div class="comment-actions">
+
+          </div>
+        </div>
+        <div class="comment-text">{{ data.comment }}</div>
+      </div>
     </div>
   </div>
 </ng-container>

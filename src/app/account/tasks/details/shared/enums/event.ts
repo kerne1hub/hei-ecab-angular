@@ -6,5 +6,6 @@ export enum AccountTasksDetailsEvent {
   REASSIGN = 'reassign',
   CHANGE_DESCRIPTION = 'description_edit',
   CHANGE_MILESTONE = 'milestone_edit',
+  COMMENT = 'comment',
   CLOSE = 'close'
 }

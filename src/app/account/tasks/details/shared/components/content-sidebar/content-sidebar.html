@@ -1,0 +1,21 @@
+<ng-container *ngIf="sidebarState$ | async as sidebarState">
+  <aside
+    [ngClass]="{
+      'expanded': sidebarState === 'expanded',
+      'collapsed': sidebarState === 'collapsed'
+    }"
+    class="tasks-details-sidebar">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <button class="button button-transparent">
+          <span class="button-title">Назначить</span>
+          <span class="icon icon-todo"></span>
+        </button>
+        <a class="sidebar-toggle" (click)="toggleSidebar()">
+          <span class="icon icon-double-left-arrow"></span>
+        </a>
+      </div>
+    </div>
+  </aside>
+</ng-container>
+

@@ -7,6 +7,8 @@ import { AccountBadgeModule } from './shared/badge';
 import { AccountSidebarModule } from './shared/sidebar';
 import { AccountHeaderModule } from './shared/header';
 import { ActionsButtonDropdownModule } from '@shared/actions-button-dropdown';
+import { StoreModule } from '@ngrx/store';
+import { accountReducer } from './shared/store/reducer';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { ActionsButtonDropdownModule } from '@shared/actions-button-dropdown';
     AccountBadgeModule,
     AccountSidebarModule,
     AccountHeaderModule,
-    ActionsButtonDropdownModule
+    ActionsButtonDropdownModule,
+    StoreModule.forFeature('account', accountReducer),
   ]
 })
 export class AccountModule { }

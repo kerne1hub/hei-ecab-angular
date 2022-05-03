@@ -9,4 +9,5 @@
   &-image {min-height: 100vh; flex: 1; overflow: hidden;
     background-color: $paper-95;
   }
+  &-controls {display: flex; justify-content: space-between;}
 }

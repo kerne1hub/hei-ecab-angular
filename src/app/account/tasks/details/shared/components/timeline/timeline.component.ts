@@ -45,4 +45,14 @@ export class AccountTasksDetailsTimelineComponent {
       date: DateTime.now().minus({ hour: 5, minute: 44 })
     });
   }
+
+  public get timelineComment(): AccountTasksDetailsEventData {
+    return new AccountTasksDetailsEventData({
+      eventType: AccountTasksDetailsEvent.COMMENT,
+      initiator: 'Алексей Мельник',
+      initiatorUsername: '@amelnik',
+      comment: 'Вариант задания брать согласно своему номеру (см. описание)',
+      date: DateTime.now().minus({ hour: 4, minute: 21 })
+    });
+  }
 }

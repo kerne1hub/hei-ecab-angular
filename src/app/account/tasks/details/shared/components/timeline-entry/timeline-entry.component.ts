@@ -12,6 +12,10 @@ import { AccountTasksDetailsEvent } from '../../enums';
 export class AccountTasksDetailsTimelineEntryComponent {
   @Input() data: AccountTasksDetailsEventData;
 
+  public get isComment(): boolean {
+    return this.data.eventType === this.eventTypeEnum.COMMENT;
+  }
+
   public get timestamp(): string {
     const currentDate = DateTime.now();
 

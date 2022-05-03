@@ -1,6 +1,9 @@
 @import 'vars';
 
 :host .account {
-  &-layout {padding-left: $sidebar-width;}
+  &-layout {padding-left: $sidebar-left-width; transition: padding 0.3s;
+    &.right-sidebar-expanded {padding-right: $sidebar-right-expanded-width;}
+    &.right-sidebar-collapsed {padding-right: $sidebar-right-collapsed-width;}
+  }
   &-page {padding: 44px 130px;}
 }

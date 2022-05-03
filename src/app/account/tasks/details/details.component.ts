@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, OnDestroy } from '@angular/core';
 import { AccountTasksDetailsPageFacade } from './details.facade';
 import { Observable } from 'rxjs';
 import { ComponentStore } from '@ngrx/component-store';
@@ -13,11 +13,19 @@ import { ComponentStore } from '@ngrx/component-store';
     AccountTasksDetailsPageFacade
   ]
 })
-export class AccountTasksDetailsPageComponent {
+export class AccountTasksDetailsPageComponent implements OnInit, OnDestroy {
   public isLoading$: Observable<boolean>;
 
   constructor(
     private facade: AccountTasksDetailsPageFacade
   ) {
+  }
+
+  public ngOnInit(): void {
+    this.facade.initPage();
+  }
+
+  public ngOnDestroy(): void {
+    this.facade.resetState();
   }
 }

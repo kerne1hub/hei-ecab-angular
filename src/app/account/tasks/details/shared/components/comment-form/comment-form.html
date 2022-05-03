@@ -7,6 +7,13 @@
   class="tasks-details-form">
   <form-textarea
     [controlState]="formState.controls.content"
-    (controlStateActionTriggered)="formActionTriggered($event)">
+    (controlStateActionTriggered)="formActionTriggered($event)"
+    placeholder="Оставьте здесь свой комментарий...">
   </form-textarea>
+  <button
+    type="submit"
+    role="button"
+    class="button button-transparent">
+    Отправить
+  </button>
 </form>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '@shared/store';
 import { ComponentStore } from '@ngrx/component-store';
-import { AccountTasksDetailsPageState } from '@app/account/tasks/details/details.state';
+import { AccountTasksDetailsPageState } from './details.state';
 import {
   Actions,
   disable,
@@ -15,6 +15,9 @@ import {
 import { HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AccountTasksDetailsCommentForm } from './shared/forms';
+import { AccountActions } from '@app/account/shared/store/actions';
+import { SidebarState } from '@shared/sidebar';
+import { AccountSelectors } from '@app/account/shared/store/selectors';
 
 @Injectable()
 export class AccountTasksDetailsPageFacade {
@@ -30,6 +33,10 @@ export class AccountTasksDetailsPageFacade {
     return this.componentStore.select((state) => state.errorResponse);
   }
 
+  public get sidebarState$(): Observable<SidebarState> {
+    return this.store.select(AccountSelectors.contentSidebarState);
+  }
+
   constructor(
     private componentStore: ComponentStore<AccountTasksDetailsPageState>,
     private store: Store<AppState>
@@ -38,7 +45,16 @@ export class AccountTasksDetailsPageFacade {
   }
 
   public resetState(): void {
+    this.store.dispatch(AccountActions.resetState());
     this.componentStore.setState(new AccountTasksDetailsPageState());
+  }
+
+  public initPage(): void {
+    this.store.dispatch(AccountActions.setContentSidebarState({ sidebarState: 'expanded' }));
+  }
+
+  public toggleSidebar(): void {
+    this.store.dispatch(AccountActions.toggleContentSidebar());
   }
 
   public handleFormStateAction(action: Actions<any>): void {

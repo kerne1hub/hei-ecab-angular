@@ -11,4 +11,12 @@
   &-initiator {font-weight: 600; color: $ink;}
   &-assigned {background: $destructive-bg; border-radius: 4px; padding: 0 2px;}
   &-unassigned {background: $primary-90; border-radius: 4px; padding: 0 2px;}
+  .comment {background: $paper-100; border-radius: 4px; border: 1px solid $ink-80; padding: 16px;
+    &-content {display: flex; align-items: center;}
+    &-avatar {width: 40px; margin-right: 16px; display: flex; justify-content: center;}
+    &-header {padding-bottom: 8px;}
+    &-text {color: $ink;}
+    .icon-wrapper, .timeline-content {display: none;}
+    .icon-user {width: 23px; height: 23px; transform: scale(1.74); line-height: 40px;}
+  }
 }
