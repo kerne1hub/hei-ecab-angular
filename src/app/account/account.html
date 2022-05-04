@@ -1,6 +1,6 @@
 <div class="account">
   <account-header></account-header>
-  <ng-container *ngIf="contentSidebarState$ | async as sidebarState">
+  <ng-container *ngrxLet="contentSidebarState$; let sidebarState">
     <div
       [ngClass]="{
         'right-sidebar-expanded': sidebarState === 'expanded',
@@ -9,7 +9,7 @@
       class="account-layout">
       <account-sidebar></account-sidebar>
       <section class="account-page">
-        <router-outlet></router-outlet>
+        <router-outlet (activate)="onRouteActivated()"></router-outlet>
       </section>
     </div>
   </ng-container>

@@ -9,6 +9,7 @@ import { AccountHeaderModule } from './shared/header';
 import { ActionsButtonDropdownModule } from '@shared/actions-button-dropdown';
 import { StoreModule } from '@ngrx/store';
 import { accountReducer } from './shared/store/reducer';
+import { ReactiveComponentModule } from '@ngrx/component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { accountReducer } from './shared/store/reducer';
     AccountHeaderModule,
     ActionsButtonDropdownModule,
     StoreModule.forFeature('account', accountReducer),
+    ReactiveComponentModule
   ]
 })
 export class AccountModule { }
