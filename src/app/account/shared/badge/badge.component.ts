@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'account-badge',
@@ -9,4 +9,12 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 export class AccountBadgeComponent {
   @Input() value: string | number;
   @Input() color: string;
+  @Input() hasDeleteAction: boolean;
+
+  @Output() deleteActionTriggered: EventEmitter<void>;
+
+  constructor() {
+    this.hasDeleteAction = false;
+    this.deleteActionTriggered = new EventEmitter<void>();
+  }
 }

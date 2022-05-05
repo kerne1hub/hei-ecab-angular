@@ -12,7 +12,8 @@
   &-todo, &-notification, &-profile {background-color: transparent; border: none;
     &:hover {background-color: rgba(255,255,255, 0.33);}
   }
-  .icon-logo {width: 72px; height: 19px; background: $paper-90; margin: auto 0;}
+  .icon {background: $paper-90;}
+  .icon-logo {width: 72px; height: 19px; margin: auto 0;}
   actions-button-dropdown {
     .button {border: none; background: transparent; padding: 7px 10px;
       &:hover {background-color: rgba(255,255,255, 0.33);}

@@ -3,4 +3,7 @@
   [ngStyle]="{ 'background': color }"
   class="badge">
   <div class="badge-value">{{ value }}</div>
+  <button *ngIf="hasDeleteAction" class="button button-transparent">
+    <span class="icon icon-cross"></span>
+  </button>
 </div>

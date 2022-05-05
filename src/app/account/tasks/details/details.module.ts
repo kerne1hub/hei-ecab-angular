@@ -16,6 +16,8 @@ import { FormTextareaModule } from '@shared/form-textarea';
 import { ReactiveComponentModule } from '@ngrx/component';
 import { NgrxFormsModule } from 'ngrx-forms';
 import { AccountTasksDetailsContentSidebarComponent } from './shared/components/content-sidebar/content-sidebar.component';
+import { FormDatepickerModule } from '@shared/form-datepicker';
+import { FormToggleCheckboxModule } from '@shared/form-toggle-checkbox';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { AccountTasksDetailsContentSidebarComponent } from './shared/components/
     AccountBadgeModule,
     FormTextareaModule,
     ReactiveComponentModule,
-    NgrxFormsModule
+    NgrxFormsModule,
+    FormDatepickerModule,
+    FormToggleCheckboxModule
   ]
 })
 export class AccountTasksDetailsPageModule { }

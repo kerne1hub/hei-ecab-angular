@@ -37,6 +37,7 @@
           }
         }
         &-toggle {padding-left: 10px; border-left: 1px solid $paper-90;}
+        &-item {display: none;}
       }
       .icon-double-left-arrow {transform: rotate(180deg);}
     }
@@ -46,13 +47,42 @@
           .button {height: 60px; width: 100%; border: none;}
           .button-title {display: none;}
         }
+        &-block {width: 60px; padding: 0; overflow: hidden; border: none;}
         &-toggle {display: flex; justify-content: center; align-items: center; width: 100%; height: 60px;}
+        &-content {display: none;}
         button:hover, a:hover {background: $paper-90;}
+        &-item:hover {color: $ink;
+          .icon {background: $ink;}
+        }
       }
     }
     .sidebar {height: 100%; overflow-y: scroll; overflow-x: hidden; -webkit-overflow-scrolling: touch;
       width: calc(100% + 100px);
       &-header {display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid $paper-90;}
+      &-block {width: 250px; padding: 16px 0; border-bottom: 1px solid $paper-90; box-sizing: border-box;}
+      &-button {padding: 0.25rem 0.5rem; border: none;
+        &:hover {background: $primary-90;}
+      }
+      &-assignee, &-deadline, &-labels, &-members, &-notifications {display: flex; align-items: center; justify-content: space-between;
+        margin-bottom: 0.25rem;
+      }
+      &-item {display: flex; flex-direction: column; justify-content: center; align-items: center; color: $ink-50;
+        height: 60px; width: 100%; border: none; padding: 0;
+      }
+      .icon-user {width: 23px; height: 23px;}
+      .user {
+        &-link {display: flex; align-items: center; color: $ink;
+          &:hover {color: $primary; text-decoration: underline;}
+        }
+        &-avatar {width: 32px; display: flex; justify-content: center;}
+        &-name {margin-left: 0.5rem;}
+        .icon-user {transform: scale(1.39);}
+      }
+      .members {display: flex;
+        &-item {padding: 0 0.5rem 0.5rem 0;}
+      }
+      .badge {padding: 0.25rem 0.5rem;}
+      .form-group {margin-bottom: 0;}
     }
   }
   .widget {

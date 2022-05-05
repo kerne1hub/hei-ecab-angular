@@ -6,10 +6,10 @@ export class AccountHeaderComponentFacade {
   public get profileActionButtons(): Array<ActionsDropdownButton> {
     return [
       new ActionsDropdownButton({
-        title: 'Алексей Нестеров',
+        title: 'Алексей Некрасов',
         disabled: true,
         type: ActionsDropdownButtonTypeEnum.INFO,
-        reasonForDisabling: '@anesterov',
+        reasonForDisabling: '@anekrasov',
         withSeparator: true
       }),
       new ActionsDropdownButton({

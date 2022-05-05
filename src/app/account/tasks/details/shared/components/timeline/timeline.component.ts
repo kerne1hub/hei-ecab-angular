@@ -36,11 +36,11 @@ export class AccountTasksDetailsTimelineComponent {
     return new AccountTasksDetailsEventData({
       eventType: AccountTasksDetailsEvent.REASSIGN,
       icon: 'user-outline',
-      initiator: 'Алексей Мельник',
+      initiator: 'Александр Мельник',
       initiatorUsername: '@amelnik',
       assign: 'Алексей Нестеров',
-      assignUsername: '@anesterov',
-      unassign: 'Алексей Мельник',
+      assignUsername: '@anekrasov',
+      unassign: 'Александр Мельник',
       unassignUsername: '@amelnik',
       date: DateTime.now().minus({ hour: 5, minute: 44 })
     });
@@ -49,7 +49,7 @@ export class AccountTasksDetailsTimelineComponent {
   public get timelineComment(): AccountTasksDetailsEventData {
     return new AccountTasksDetailsEventData({
       eventType: AccountTasksDetailsEvent.COMMENT,
-      initiator: 'Алексей Мельник',
+      initiator: 'Александр Мельник',
       initiatorUsername: '@amelnik',
       comment: 'Вариант задания брать согласно своему номеру (см. описание)',
       date: DateTime.now().minus({ hour: 4, minute: 21 })

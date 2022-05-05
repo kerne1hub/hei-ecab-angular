@@ -20,12 +20,12 @@ export class AccountTasksDetailsCommentFormComponent {
     private facade: AccountTasksDetailsPageFacade
   ) {
     this.isSendingRequest$ = this.facade.isSendingRequest$;
-    this.formState$ = this.facade.formState$;
+    this.formState$ = this.facade.commentFormState$;
     this.errorResponse$ = this.facade.errorResponse$;
   }
 
   public formActionTriggered(action: Actions<any>): void {
-    this.facade.handleFormStateAction(action);
+    this.facade.handleCommentFormStateAction(action);
   }
 
   public formSubmitted(): void {

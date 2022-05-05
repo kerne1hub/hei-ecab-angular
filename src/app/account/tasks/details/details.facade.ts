@@ -14,7 +14,7 @@ import {
 } from 'ngrx-forms';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { AccountTasksDetailsCommentForm } from './shared/forms';
+import { AccountTasksDetailsActionForm, AccountTasksDetailsCommentForm } from './shared/forms';
 import { AccountActions } from '@app/account/shared/store/actions';
 import { SidebarState } from '@shared/sidebar';
 import { AccountSelectors } from '@app/account/shared/store/selectors';
@@ -25,8 +25,12 @@ export class AccountTasksDetailsPageFacade {
     return this.componentStore.select((state) => state.isSendingRequest);
   }
 
-  public get formState$(): Observable<FormGroupState<AccountTasksDetailsCommentForm>> {
-    return this.componentStore.select((state) => state.formState);
+  public get actionFormState$(): Observable<FormGroupState<AccountTasksDetailsActionForm>> {
+    return this.componentStore.select((state) => state.actionFormState);
+  }
+
+  public get commentFormState$(): Observable<FormGroupState<AccountTasksDetailsCommentForm>> {
+    return this.componentStore.select((state) => state.commentFormState);
   }
 
   public get errorResponse$(): Observable<HttpErrorResponse> {
@@ -57,23 +61,44 @@ export class AccountTasksDetailsPageFacade {
     this.store.dispatch(AccountActions.toggleContentSidebar());
   }
 
-  public handleFormStateAction(action: Actions<any>): void {
-    this.updateFormState(action);
+  public handleCommentFormStateAction(action: Actions<any>): void {
+    this.updateCommentFormState(action);
 
     if (action instanceof SetValueAction) {
       this.clearStateErrors();
     }
 
     if (action instanceof MarkAsSubmittedAction) {
-      this.markFormStateAsSubmitted();
+      this.markCommentFormStateAsSubmitted();
     }
   }
 
-  private updateFormState(action: Actions<any>): void {
+  public handleActionFormStateAction(action: Actions<any>): void {
+    this.updateActionFormState(action);
+
+    if (action instanceof SetValueAction) {
+      this.clearStateErrors();
+    }
+
+    if (action instanceof MarkAsSubmittedAction) {
+      this.markActionFormStateAsSubmitted();
+    }
+  }
+
+  private updateCommentFormState(action: Actions<any>): void {
     this.componentStore.updater(
       (state) => ({
         ...state,
-        formState: formGroupReducer(state.formState, action)
+        commentFormState: formGroupReducer(state.commentFormState, action)
+      })
+    )();
+  }
+
+  private updateActionFormState(action: Actions<any>): void {
+    this.componentStore.updater(
+      (state) => ({
+        ...state,
+        actionFormState: formGroupReducer(state.actionFormState, action)
       })
     )();
   }
@@ -87,11 +112,20 @@ export class AccountTasksDetailsPageFacade {
     )();
   }
 
-  private markFormStateAsSubmitted(): void {
+  private markCommentFormStateAsSubmitted(): void {
     this.componentStore.updater(
       (state) => ({
         ...state,
-        formState: markAsSubmitted(state.formState)
+        commentFormState: markAsSubmitted(state.commentFormState)
+      })
+    )();
+  }
+
+  private markActionFormStateAsSubmitted(): void {
+    this.componentStore.updater(
+      (state) => ({
+        ...state,
+        actionFormState: markAsSubmitted(state.actionFormState)
       })
     )();
   }
@@ -105,13 +139,24 @@ export class AccountTasksDetailsPageFacade {
     )();
   }
 
-  private toggleDisablingForm(value: boolean): void {
+  private toggleDisablingCommentForm(value: boolean): void {
     this.componentStore.updater(
       (state) => ({
         ...state,
-        formState: value
-          ? disable(state.formState)
-          : enable(state.formState)
+        commentFormState: value
+          ? disable(state.commentFormState)
+          : enable(state.commentFormState)
+      })
+    )();
+  }
+
+  private toggleDisablingActionForm(value: boolean): void {
+    this.componentStore.updater(
+      (state) => ({
+        ...state,
+        actionFormState: value
+          ? disable(state.actionFormState)
+          : enable(state.actionFormState)
       })
     )();
   }

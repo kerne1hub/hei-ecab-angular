@@ -15,6 +15,115 @@
           <span class="icon icon-double-left-arrow"></span>
         </a>
       </div>
+      <form
+        *ngrxLet="formState$; let formState"
+        [ngrxFormState]="formState"
+        (ngrxFormsAction)="formActionTriggered($event)"
+        class="sidebar-form">
+        <div class="sidebar-block">
+          <button class="sidebar-item button button-transparent">
+            <div class="user-avatar">
+              <span class="icon icon-user"></span>
+            </div>
+          </button>
+          <div class="sidebar-content">
+            <div class="sidebar-assignee">
+              Ответственный
+              <a class="button button-transparent sidebar-button">
+                <span class="button-title">Изменить</span>
+              </a>
+            </div>
+            <div class="user">
+              <a class="user-link">
+                <div class="user-avatar">
+                  <span class="icon icon-user"></span>
+                </div>
+                <div class="user-name">
+                  <span>Алексей Некрасов</span>
+                  <div>@anekrasov</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <button class="sidebar-item button button-transparent">
+            <span class="icon icon-clock"></span>
+            23 дня
+          </button>
+          <div class="sidebar-content">
+            <div class="sidebar-deadline">
+              Срок сдачи
+              <a class="button button-transparent sidebar-button">
+                <span class="button-title">Изменить</span>
+              </a>
+            </div>
+            <form-datepicker
+              [controlState]="formState.controls.deadline"
+              (controlStateActionTriggered)="formActionTriggered($event)"
+              xPosition="start"
+              placeholder="{{ 'ACCOUNT.SCHEDULE.FILTERS.TEXT_DATE_PLACEHOLDER' | translate }}">
+            </form-datepicker>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <button class="sidebar-item button button-transparent">
+            <span class="icon icon-label"></span>
+            1
+          </button>
+          <div class="sidebar-content">
+            <div class="sidebar-labels">
+              Метки
+              <a class="button button-transparent sidebar-button">
+                <span class="button-title">Изменить</span>
+              </a>
+            </div>
+            <div class="labels">
+              <account-badge
+                [value]="'Назначено'"
+                [color]="'#F0AD4E'"
+                [hasDeleteAction]="true">
+              </account-badge>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <button class="sidebar-item button button-transparent">
+            <span class="icon icon-group"></span>
+            2
+          </button>
+          <div class="sidebar-content">
+            <div class="sidebar-members">
+              Участники: 2
+              <a class="button button-transparent sidebar-button">
+                <span class="button-title">Изменить</span>
+              </a>
+            </div>
+            <div class="members">
+              <div class="members-item">
+                <span class="icon icon-user"></span>
+              </div>
+              <div class="members-item">
+                <span class="icon icon-user"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <button class="sidebar-item button button-transparent">
+            <span class="icon icon-notification"></span>
+          </button>
+          <div class="sidebar-content">
+            <div class="sidebar-notifications">
+               Уведомления
+              <form-toggle-checkbox
+                [controlState]="formState.controls.isNotificationsEnabled"
+                (controlStateActionTriggered)="formActionTriggered($event)">
+              </form-toggle-checkbox>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </aside>
 </ng-container>

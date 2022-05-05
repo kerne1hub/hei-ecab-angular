@@ -27,7 +27,7 @@ export const initConfiguration = (configuration: any): any => merge({
   datepicker: {
     dateFormats: {
       display: {
-        dateInput: 'MMM d, yyyy',
+        dateInput: 'd MMM, yyyy',
         monthYearLabel: 'MMMM, yyyy'
       }
     },
